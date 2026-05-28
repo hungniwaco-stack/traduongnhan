@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export function Header() {
   return (
@@ -32,9 +32,10 @@ export function Footer() {
         <div>
           <h3>Thông tin</h3>
           <ul>
-            <li>Chính sách affiliate</li>
-            <li>Liên hệ</li>
-            <li>Điều khoản sử dụng</li>
+            <li><Link href="/ve-chung-toi">Về chúng tôi</Link></li>
+            <li><Link href="/chinh-sach-affiliate">Chính sách affiliate</Link></li>
+            <li><Link href="/lien-he">Liên hệ</Link></li>
+            <li><Link href="/dieu-khoan-su-dung">Điều khoản sử dụng</Link></li>
           </ul>
         </div>
         <div>

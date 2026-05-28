@@ -30,6 +30,18 @@ npm run build
 npm run start
 ```
 
+## Theo doi SEO (GSC + GA4)
+1. Tao property `https://trathugian.shop` tren Google Search Console.
+2. Xac minh domain bang DNS TXT o Hostinger.
+3. Gui sitemap: `https://trathugian.shop/sitemap.xml`.
+4. Gan GA4 bang Google Tag Manager hoac script GA trong `app/layout.tsx` neu co `G-XXXXXXX`.
+
+## Bat GA4 nhanh
+1. Tao file `.env.local` trong thu muc project.
+2. Them dong:
+   `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX`
+3. Chay lai `npm run dev` hoac build/deploy lai.
+
 ## Cấu trúc chính
 - `app/`: routes và layout
 - `components/`: Header, Footer, ArticleCard, ProductCard, AffiliateButton, FAQSection, CategoryCard, Breadcrumb, TableOfContents, DisclaimerBox

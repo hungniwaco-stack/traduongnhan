@@ -1,0 +1,24 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Về chúng tôi | Trà Thư Giãn",
+  description: "Giới thiệu về dự án Trà Thư Giãn, tiêu chí nội dung và nguyên tắc review minh bạch."
+};
+
+export default function AboutPage() {
+  return (
+    <section className="article">
+      <h1>Về chúng tôi</h1>
+      <p>Trà Thư Giãn là blog nội dung dành cho dân văn phòng, tập trung vào trà thảo mộc và lối sống nhẹ nhàng.</p>
+      <h2>Tiêu chí biên tập</h2>
+      <ul>
+        <li>Ưu tiên trải nghiệm thực tế và thông tin có ích cho người mới.</li>
+        <li>Không đưa claim y tế quá mức như chữa bệnh hoặc cam kết hiệu quả.</li>
+        <li>Dùng ngôn ngữ cẩn trọng: hỗ trợ, có thể, thường được dùng.</li>
+      </ul>
+      <h2>Minh bạch affiliate</h2>
+      <p>Một số link trên website là link affiliate Shopee. Chúng tôi có thể nhận hoa hồng nhỏ nếu bạn mua qua link, không làm tăng giá sản phẩm.</p>
+    </section>
+  );
+}
+
