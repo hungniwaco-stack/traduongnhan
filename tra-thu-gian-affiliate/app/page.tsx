@@ -19,17 +19,6 @@ export default function HomePage() {
       </section>
 
       <section className="section">
-        <div className="card">
-          <h2>Cập nhật mới nhất (29/05/2026)</h2>
-          <ul>
-            <li>Đã thêm khối SEO/GEO: Tóm tắt nhanh, Phù hợp với ai, Ai nên cân nhắc thêm.</li>
-            <li>Đã thêm So sánh nhanh + Checklist quyết định mua cho các bài review.</li>
-            <li>Đã thêm các trang tin cậy: Về chúng tôi, Chính sách affiliate, Liên hệ, Điều khoản sử dụng.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="section">
         <h2>Bài viết nổi bật về trà ngủ ngon</h2>
         <div className="grid grid-2">{posts.filter((p) => p.category === "tra-ngu-ngon").slice(0, 2).map((p) => <ArticleCard key={p.slug} post={p} />)}</div>
       </section>
