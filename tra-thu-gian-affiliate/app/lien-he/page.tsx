@@ -10,7 +10,7 @@ export default function ContactPage() {
     <section className="article">
       <h1>Liên hệ</h1>
       <p>Nếu bạn cần góp ý nội dung hoặc hợp tác media, vui lòng liên hệ qua email:</p>
-      <p><strong>hello@trathugian.shop</strong></p>
+      <p><strong>hatmuadem@gmail.com</strong></p>
       <p>Chúng tôi thường phản hồi trong 24-48 giờ làm việc.</p>
     </section>
   );
