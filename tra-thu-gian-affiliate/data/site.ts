@@ -222,7 +222,7 @@ export const posts: BlogPost[] = [
 ,
   {
     slug: "review-tra-tam-sen-say-kho-cho-nguoi-kho-ngu",
-    title: "Review Trà Tâm Sen Sấy Khô: Có hợp với dân văn phòng khó ngủ?",
+    title: "Trà Tâm Sen Sấy Khô có hợp với dân văn phòng khó ngủ?",
     description: "Bài review chi tiết trà tâm sen sấy khô: hương vị, cách pha, đối tượng phù hợp và lưu ý khi dùng.",
     category: "review-tra",
     productId: "tam-sen-say-kho",
@@ -244,7 +244,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-tra-hoa-cuc-mat-ong-van-an-ocop",
-    title: "Review Trà Hoa Cúc Mật Ong Vạn An OCOP: Dễ uống cho người mới?",
+    title: "Trà Hoa Cúc Mật Ong Vạn An OCOP: dễ uống cho người mới?",
     description: "Đánh giá thực tế trà hoa cúc mật ong Vạn An OCOP: vị, độ tiện, đối tượng phù hợp và lưu ý.",
     category: "review-tra",
     productId: "tra-hoa-cuc-mat-ong",
@@ -264,7 +264,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-nu-hoa-oai-huong-lavender-say-kho",
-    title: "Review Nụ Hoa Oải Hương Sấy Khô: Thư giãn tinh thần sau giờ làm",
+    title: "Nụ Hoa Oải Hương Sấy Khô: thư giãn tinh thần sau giờ làm",
     description: "Review trà lavender sấy khô: cảm nhận mùi vị, cách pha và ai nên cân nhắc trước khi dùng.",
     category: "review-tra",
     productId: "tra-lavender-ngu-ngon",
@@ -284,7 +284,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-tra-gao-lut-dau-do-rang-cho-van-phong",
-    title: "Review Trà Gạo Lứt Đậu Đỏ Rang: Lựa chọn lành mạnh thay đồ ngọt",
+    title: "Trà Gạo Lứt Đậu Đỏ Rang: lựa chọn lành mạnh thay đồ ngọt",
     description: "Đánh giá trà gạo lứt đậu đỏ rang: vị bùi, cách pha, ai nên dùng trong môi trường công sở.",
     category: "review-tra",
     productId: "tra-gao-lut-dau-do",
@@ -304,7 +304,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-tra-hoa-nhai-no-say-kho-nguyen-bong",
-    title: "Review Trà Hoa Nhài Nở Sấy Khô Nguyên Bông: Thanh nhẹ, dễ duy trì",
+    title: "Trà Hoa Nhài Nở Sấy Khô Nguyên Bông: thanh nhẹ, dễ duy trì",
     description: "Bài review trà hoa nhài nguyên bông: hương vị, đối tượng phù hợp và cách uống cho dân văn phòng.",
     category: "review-tra",
     productId: "tra-hoa-nhai-goji",
@@ -324,7 +324,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-tra-cam-que-hoa-hong-tao-do-hoa-nhai",
-    title: "Review Trà cam quế hoa hồng, táo đỏ, hoa nhài: Ấm dịu cuối ngày",
+    title: "Trà cam quế hoa hồng, táo đỏ, hoa nhài: ấm dịu cuối ngày",
     description: "Review chi tiết trà cam quế hoa hồng táo đỏ hoa nhài: mùi vị, đối tượng phù hợp và lưu ý.",
     category: "review-tra",
     productId: "tra-cam-thao-tao-do",
