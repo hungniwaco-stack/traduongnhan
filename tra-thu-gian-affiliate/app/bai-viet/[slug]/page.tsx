@@ -29,7 +29,7 @@ export default function BlogPostPage({ params }: Props) {
 
   const relatedPosts = posts.filter((item) => item.category === post.category && item.slug !== post.slug).slice(0, 3);
   const isReview = post.category === "review-tra";
-  const updatedAt = "2026-05-28";
+  const updatedAt = "28/05/2026";
   const url = `https://trathugian.shop/bai-viet/${post.slug}/`;
 
   const breadcrumbSchema = {
