@@ -25,6 +25,7 @@ export function generateMetadata({ params }: Props): Metadata {
 export default function BlogPostPage({ params }: Props) {
   const post = posts.find((item) => item.slug === params.slug);
   if (!post) notFound();
+  const productForPost = post.productId ? products.find((p) => p.id === post.productId) : products[0];
 
   const relatedPosts = posts.filter((item) => item.category === post.category && item.slug !== post.slug).slice(0, 3);
   const isReview = post.category === "review-tra";
@@ -128,7 +129,7 @@ export default function BlogPostPage({ params }: Props) {
 
       <section>
         <h2>Box sản phẩm gợi ý</h2>
-        <ProductCard product={products[0]} />
+        {productForPost ? <ProductCard product={productForPost} /> : null}
       </section>
 
       <FAQSection faqs={post.faqs} />

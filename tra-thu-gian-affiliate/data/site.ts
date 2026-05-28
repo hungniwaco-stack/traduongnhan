@@ -4,6 +4,7 @@ export type BlogPost = {
   title: string;
   description: string;
   category: "tra-ngu-ngon" | "giam-stress" | "review-tra" | "healthy-lifestyle" | "kien-thuc-tra";
+  productId?: string;
   intro: string;
   toc: string[];
   quickSummary?: string[];
@@ -16,6 +17,7 @@ export type BlogPost = {
 export type Product = {
   id: string;
   name: string;
+  image: string;
   shortDesc: string;
   benefits: string[];
   ingredients: string;
@@ -46,6 +48,7 @@ export const products: Product[] = [
   {
     id: "tam-sen-say-kho",
     name: "Trà Tâm Sen Sấy Khô Giúp Ngủ Ngon Thanh Nhiệt",
+    image: "/images/products/01.webp",
     shortDesc: "Vị thanh nhẹ, thường được dùng vào buổi tối để hỗ trợ thư giãn.",
     benefits: ["Hỗ trợ thư giãn sau giờ làm", "Có thể giúp cơ thể dễ vào giấc hơn", "Phù hợp routine tối nhẹ nhàng"],
     ingredients: "Tâm sen sấy khô, không tẩm hương liệu mạnh.",
@@ -58,6 +61,7 @@ export const products: Product[] = [
   {
     id: "tra-hoa-cuc-mat-ong",
     name: "Trà Hoa Cúc Mật Ong Vạn An Thượng Hạng OCOP, Trà Hoa Cúc Đường Phèn Dưỡng Nhan Đẹp Da",
+    image: "/images/products/02.webp",
     shortDesc: "Dễ pha, mùi thơm dịu, thích hợp cho người mới bắt đầu uống trà thảo mộc.",
     benefits: ["Giúp thư giãn tinh thần", "Dùng nhanh ở văn phòng", "Vị dịu, dễ uống"],
     ingredients: "Hoa cúc sấy, mật ong sấy, túi lọc giấy thực phẩm.",
@@ -70,6 +74,7 @@ export const products: Product[] = [
   {
     id: "tra-lavender-ngu-ngon",
     name: "Nụ hoa oải hương, lavender sấy khô, thư giãn, thảo mộc thiên nhiên",
+    image: "/images/products/03.webp",
     shortDesc: "Mùi hương thảo mộc nhẹ, thường dùng trong routine trước giờ ngủ.",
     benefits: ["Hỗ trợ thả lỏng", "Tạo cảm giác dễ chịu cuối ngày", "Kết hợp tốt với journaling"],
     ingredients: "Hoa lavender, cỏ ngọt tự nhiên.",
@@ -82,6 +87,7 @@ export const products: Product[] = [
   {
     id: "tra-gao-lut-dau-do",
     name: "Trà Gạo Lứt Đậu Đỏ Rang",
+    image: "/images/products/04.webp",
     shortDesc: "Vị bùi nhẹ, dễ uống ban ngày hoặc tối sớm.",
     benefits: ["Giúp thay đồ uống ngọt", "Cảm giác ấm bụng", "Hợp với chế độ ăn lành mạnh"],
     ingredients: "Gạo lứt rang, đậu đỏ rang.",
@@ -94,6 +100,7 @@ export const products: Product[] = [
   {
     id: "tra-hoa-nhai-goji",
     name: "Trà Hoa Nhài Nở Sấy Khô Nguyên Bông",
+    image: "/images/products/05.webp",
     shortDesc: "Hương hoa nhẹ, vị thanh, phù hợp dùng chiều tối để thư giãn sau giờ làm.",
     benefits: ["Hỗ trợ thư giãn tinh thần", "Dễ uống với người mới bắt đầu", "Phù hợp routine tối nhẹ nhàng"],
     ingredients: "Hoa nhài sấy, kỷ tử, cỏ ngọt tự nhiên.",
@@ -106,6 +113,7 @@ export const products: Product[] = [
   {
     id: "tra-cam-thao-tao-do",
     name: "Trà cam quế hoa hồng, táo đỏ, hoa nhài",
+    image: "/images/products/06.jpg",
     shortDesc: "Vị ngọt thanh tự nhiên, phù hợp uống ấm vào tối sớm hoặc ngày mưa.",
     benefits: ["Giúp thay thế đồ uống nhiều đường", "Có thể hỗ trợ cảm giác ấm bụng", "Hợp với lối sống healthy nhẹ nhàng"],
     ingredients: "Cam thảo lát, táo đỏ sấy, hoa cúc trắng.",
@@ -217,6 +225,7 @@ export const posts: BlogPost[] = [
     title: "Review Trà Tâm Sen Sấy Khô: Có hợp với dân văn phòng khó ngủ?",
     description: "Bài review chi tiết trà tâm sen sấy khô: hương vị, cách pha, đối tượng phù hợp và lưu ý khi dùng.",
     category: "review-tra",
+    productId: "tam-sen-say-kho",
     intro: "Trà tâm sen sấy khô thường được dùng vào buổi tối để hỗ trợ thư giãn và giúp cơ thể dễ vào trạng thái nghỉ ngơi hơn. Với dân văn phòng căng thẳng cuối ngày, đây có thể là lựa chọn đáng thử nếu pha đúng độ và dùng đều đặn.",
     toc: ["Sản phẩm là gì", "Điểm mạnh và điểm cần lưu ý", "Cách dùng thực tế cho dân văn phòng"],
     quickSummary: ["Vị mộc, hơi đắng nhẹ.", "Hợp dùng tối sau bữa ăn.", "Nên bắt đầu từ nồng độ vừa phải."],
@@ -238,6 +247,7 @@ export const posts: BlogPost[] = [
     title: "Review Trà Hoa Cúc Mật Ong Vạn An OCOP: Dễ uống cho người mới?",
     description: "Đánh giá thực tế trà hoa cúc mật ong Vạn An OCOP: vị, độ tiện, đối tượng phù hợp và lưu ý.",
     category: "review-tra",
+    productId: "tra-hoa-cuc-mat-ong",
     intro: "Nếu bạn mới bắt đầu uống trà thảo mộc, trà hoa cúc mật ong Vạn An OCOP là lựa chọn dễ tiếp cận vì vị dịu, mùi nhẹ và cách pha nhanh. Sản phẩm phù hợp với người bận rộn muốn thay đồ uống ngọt bằng một lựa chọn nhẹ nhàng hơn.",
     toc: ["Hương vị thực tế", "Ưu điểm cho dân văn phòng", "Lưu ý trước khi dùng"],
     quickSummary: ["Dễ uống với người mới.", "Pha nhanh 3-5 phút.", "Hợp khung giờ chiều tối."],
@@ -257,6 +267,7 @@ export const posts: BlogPost[] = [
     title: "Review Nụ Hoa Oải Hương Sấy Khô: Thư giãn tinh thần sau giờ làm",
     description: "Review trà lavender sấy khô: cảm nhận mùi vị, cách pha và ai nên cân nhắc trước khi dùng.",
     category: "review-tra",
+    productId: "tra-lavender-ngu-ngon",
     intro: "Nụ hoa oải hương sấy khô phù hợp với người muốn thư giãn tinh thần sau giờ làm việc căng thẳng. Mùi floral khá rõ nên trải nghiệm sẽ phụ thuộc khẩu vị từng người, nhưng nếu dùng đúng lượng và uống ấm, cảm giác dễ chịu thường rõ hơn.",
     toc: ["Mùi vị và trải nghiệm", "Đối tượng phù hợp", "Cách pha để dễ uống"],
     quickSummary: ["Mùi floral rõ.", "Nên pha nhẹ nếu mới dùng.", "Hợp routine thư giãn tối."],
@@ -276,6 +287,7 @@ export const posts: BlogPost[] = [
     title: "Review Trà Gạo Lứt Đậu Đỏ Rang: Lựa chọn lành mạnh thay đồ ngọt",
     description: "Đánh giá trà gạo lứt đậu đỏ rang: vị bùi, cách pha, ai nên dùng trong môi trường công sở.",
     category: "review-tra",
+    productId: "tra-gao-lut-dau-do",
     intro: "Trà gạo lứt đậu đỏ rang là lựa chọn dễ uống cho người muốn thay dần nước ngọt hoặc trà sữa. Vị bùi nhẹ, cảm giác ấm bụng và ít kén khẩu vị giúp sản phẩm này phù hợp với nhịp sống văn phòng bận rộn hằng ngày.",
     toc: ["Vị trà có gì nổi bật", "Ai nên dùng", "Mẹo dùng hiệu quả"],
     quickSummary: ["Vị bùi nhẹ, dễ uống.", "Thay thế đồ ngọt hằng ngày.", "Phù hợp mang đi làm."],
@@ -295,6 +307,7 @@ export const posts: BlogPost[] = [
     title: "Review Trà Hoa Nhài Nở Sấy Khô Nguyên Bông: Thanh nhẹ, dễ duy trì",
     description: "Bài review trà hoa nhài nguyên bông: hương vị, đối tượng phù hợp và cách uống cho dân văn phòng.",
     category: "review-tra",
+    productId: "tra-hoa-nhai-goji",
     intro: "Trà hoa nhài nở sấy khô nguyên bông phù hợp với người thích hương hoa nhẹ và muốn một loại trà uống đều mỗi ngày. Vị thanh, hậu dịu giúp sản phẩm này dễ kết hợp với routine làm việc lẫn thư giãn buổi tối.",
     toc: ["Cảm nhận hương vị", "Phù hợp với ai", "Cách dùng gợi ý"],
     quickSummary: ["Hương nhài nhẹ.", "Dễ duy trì 1-2 ly/ngày.", "Hợp văn phòng và buổi tối."],
@@ -314,6 +327,7 @@ export const posts: BlogPost[] = [
     title: "Review Trà cam quế hoa hồng, táo đỏ, hoa nhài: Ấm dịu cuối ngày",
     description: "Review chi tiết trà cam quế hoa hồng táo đỏ hoa nhài: mùi vị, đối tượng phù hợp và lưu ý.",
     category: "review-tra",
+    productId: "tra-cam-thao-tao-do",
     intro: "Trà cam quế hoa hồng, táo đỏ, hoa nhài mang vị ngọt thanh tự nhiên và cảm giác ấm dịu, phù hợp cho tối sớm hoặc ngày mưa. Đây là lựa chọn đáng cân nhắc nếu bạn muốn giảm đồ uống ngọt nhưng vẫn giữ trải nghiệm dễ chịu.",
     toc: ["Điểm nổi bật của sản phẩm", "Ai nên cân nhắc dùng", "Cách pha cho vị cân bằng"],
     quickSummary: ["Mùi thảo mộc ấm.", "Vị ngọt thanh tự nhiên.", "Hợp uống tối sớm."],

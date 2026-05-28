@@ -16,6 +16,7 @@ export function ArticleCard({ post }: { post: BlogPost }) {
 export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="card">
+      <img className="product-image" src={product.image} alt={product.name} loading="lazy" />
       <h3>{product.name}</h3>
       <p>{product.shortDesc}</p>
       <ul>{product.benefits.map((b) => <li key={b}>{b}</li>)}</ul>
