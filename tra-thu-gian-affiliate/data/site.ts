@@ -5,6 +5,7 @@ export type BlogPost = {
   description: string;
   category: "tra-ngu-ngon" | "giam-stress" | "review-tra" | "healthy-lifestyle" | "kien-thuc-tra";
   productId?: string;
+  relatedSlugs?: string[];
   intro: string;
   toc: string[];
   quickSummary?: string[];
@@ -128,9 +129,10 @@ export const products: Product[] = [
 export const posts: BlogPost[] = [
   {
     slug: "tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong",
-    title: "Trà nào hỗ trợ ngủ ngon cho dân văn phòng bận rộn?",
-    description: "Gợi ý các loại trà thảo mộc giúp bạn thư giãn và dễ vào giấc hơn sau ngày làm việc dài.",
+    title: "Trà ngủ ngon cho dân văn phòng: nên chọn loại nào?",
+    description: "Gợi ý trà thảo mộc hỗ trợ thư giãn và dễ vào giấc hơn cho dân văn phòng, kèm cách uống trước giờ ngủ.",
     category: "tra-ngu-ngon",
+    relatedSlugs: ["5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay", "routine-buoi-toi-15-phut-giam-cang-thang", "review-tra-tam-sen-say-kho-cho-nguoi-kho-ngu"],
     intro: "Nếu bạn hay trằn trọc vì đầu óc còn căng sau giờ làm, các loại trà thảo mộc dịu nhẹ có thể hỗ trợ thư giãn và tạo tín hiệu nghỉ ngơi cho cơ thể. Chọn đúng loại, đúng thời điểm sẽ giúp routine tối ổn định hơn.",
     toc: ["Vì sao dân văn phòng khó ngủ", "3 nhóm trà nên thử", "Cách uống để hiệu quả ổn định"],
     quickSummary: ["Ưu tiên trà dịu, ít kích thích buổi tối.", "Uống trước ngủ 60-90 phút.", "Duy trì đều để quan sát mức phù hợp."],
@@ -149,9 +151,10 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "routine-buoi-toi-15-phut-giam-cang-thang",
-    title: "Routine buổi tối 15 phút giúp giảm căng thẳng sau giờ làm",
-    description: "Một routine ngắn, dễ duy trì cho người bận rộn muốn ngủ tốt hơn.",
+    title: "Routine buổi tối 15 phút cho dân văn phòng ngủ ngon hơn",
+    description: "Routine 15 phút gồm trà ấm, giãn cơ và chuẩn bị ngày mai giúp giảm căng thẳng sau giờ làm.",
     category: "healthy-lifestyle",
+    relatedSlugs: ["tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong", "review-tra-tam-sen-say-kho-cho-nguoi-kho-ngu", "giam-stress-o-van-phong-bang-do-uong-lanh-manh"],
     intro: "Bạn không cần routine phức tạp để sống lành mạnh hơn. Chỉ 15 phút buổi tối với trà ấm, giãn cơ và giảm tiếp xúc màn hình có thể giúp tâm trí chậm lại, từ đó hỗ trợ giấc ngủ và năng lượng ngày hôm sau.",
     toc: ["Routine 15 phút", "Những lỗi thường gặp", "Mẹo duy trì lâu dài"],
     sections: [
@@ -167,9 +170,10 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "kien-thuc-co-ban-ve-tra-thao-moc",
-    title: "Kiến thức cơ bản về trà thảo mộc cho người mới bắt đầu",
-    description: "Hiểu đúng về trà thảo mộc để chọn sản phẩm phù hợp nhu cầu.",
+    title: "Kiến thức trà thảo mộc cho người mới: cách chọn và pha đúng",
+    description: "Hướng dẫn đọc thành phần, chọn trà phù hợp và pha trà thảo mộc đúng cách cho người mới bắt đầu.",
     category: "kien-thuc-tra",
+    relatedSlugs: ["review-tra-hoa-cuc-mat-ong-van-an-ocop", "review-nu-hoa-oai-huong-lavender-say-kho", "tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong"],
     intro: "Trà thảo mộc không phải thuốc và cũng không thay thế điều trị chuyên môn, nhưng thường được dùng để hỗ trợ thư giãn, cân bằng thói quen sinh hoạt. Hiểu đúng thành phần, thời điểm uống và cách pha sẽ giúp bạn dùng trà hiệu quả hơn.",
     toc: ["Trà thảo mộc là gì", "Cách đọc thành phần", "Nguyên tắc pha cơ bản"],
     sections: [
@@ -185,9 +189,10 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "giam-stress-o-van-phong-bang-do-uong-lanh-manh",
-    title: "Giảm stress ở văn phòng bằng đồ uống lành mạnh: nên bắt đầu từ đâu?",
-    description: "Cách thay đổi nhỏ trong đồ uống giúp nhịp làm việc nhẹ nhàng hơn.",
+    title: "Giảm stress văn phòng bằng đồ uống lành mạnh: bắt đầu từ đâu?",
+    description: "3 thay đổi nhỏ trong đồ uống mỗi ngày giúp dân văn phòng giảm căng thẳng và ổn định năng lượng.",
     category: "giam-stress",
+    relatedSlugs: ["routine-buoi-toi-15-phut-giam-cang-thang", "review-tra-gao-lut-dau-do-rang-cho-van-phong", "5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay"],
     intro: "Để giảm stress khi làm việc, bắt đầu từ đồ uống mỗi ngày là cách dễ nhất. Chuyển dần từ nước ngọt sang trà thảo mộc hoặc trà rang có thể giúp bạn ổn định năng lượng tốt hơn và giảm cảm giác bồn chồn cuối ngày.",
     toc: ["Vì sao đồ uống ảnh hưởng stress", "3 thay đổi nhỏ", "Checklist 7 ngày"],
     sections: [
@@ -204,8 +209,9 @@ export const posts: BlogPost[] = [
   {
     slug: "5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay",
     title: "6 loại trà cho dân văn phòng dễ uống ban ngày",
-    description: "Danh sách trà vị dịu, tiện pha, hợp mang đi làm.",
+    description: "Danh sách 6 loại trà dễ uống cho dân văn phòng, phù hợp mang đi làm và duy trì hằng ngày.",
     category: "tra-ngu-ngon",
+    relatedSlugs: ["tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong", "giam-stress-o-van-phong-bang-do-uong-lanh-manh", "review-tra-gao-lut-dau-do-rang-cho-van-phong"],
     intro: "Nếu bạn muốn thay đổi thói quen đồ uống công sở, 6 loại trà dưới đây dễ pha, dễ uống và phù hợp nhịp làm việc bận rộn. Chúng không tạo cảm giác nặng nề, đồng thời có thể hỗ trợ tinh thần nhẹ nhàng suốt ngày.",
     toc: ["Tiêu chí chọn trà công sở", "Top 6 gợi ý", "Cách chuẩn bị tiết kiệm thời gian"],
     sections: [
@@ -223,9 +229,10 @@ export const posts: BlogPost[] = [
   {
     slug: "review-tra-tam-sen-say-kho-cho-nguoi-kho-ngu",
     title: "Trà Tâm Sen Sấy Khô có hợp với dân văn phòng khó ngủ?",
-    description: "Bài review chi tiết trà tâm sen sấy khô: hương vị, cách pha, đối tượng phù hợp và lưu ý khi dùng.",
+    description: "Đánh giá trà tâm sen sấy khô: vị, cách pha, đối tượng phù hợp và lưu ý trước khi dùng.",
     category: "review-tra",
     productId: "tam-sen-say-kho",
+    relatedSlugs: ["tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong", "routine-buoi-toi-15-phut-giam-cang-thang", "5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay"],
     intro: "Trà tâm sen sấy khô thường được dùng vào buổi tối để hỗ trợ thư giãn và giúp cơ thể dễ vào trạng thái nghỉ ngơi hơn. Với dân văn phòng căng thẳng cuối ngày, đây có thể là lựa chọn đáng thử nếu pha đúng độ và dùng đều đặn.",
     toc: ["Sản phẩm là gì", "Điểm mạnh và điểm cần lưu ý", "Cách dùng thực tế cho dân văn phòng"],
     quickSummary: ["Vị mộc, hơi đắng nhẹ.", "Hợp dùng tối sau bữa ăn.", "Nên bắt đầu từ nồng độ vừa phải."],
@@ -245,9 +252,10 @@ export const posts: BlogPost[] = [
   {
     slug: "review-tra-hoa-cuc-mat-ong-van-an-ocop",
     title: "Trà Hoa Cúc Mật Ong Vạn An OCOP: dễ uống cho người mới?",
-    description: "Đánh giá thực tế trà hoa cúc mật ong Vạn An OCOP: vị, độ tiện, đối tượng phù hợp và lưu ý.",
+    description: "Trà hoa cúc mật ong Vạn An OCOP có dễ uống không? Đánh giá nhanh cho người mới bắt đầu.",
     category: "review-tra",
     productId: "tra-hoa-cuc-mat-ong",
+    relatedSlugs: ["kien-thuc-co-ban-ve-tra-thao-moc", "routine-buoi-toi-15-phut-giam-cang-thang", "tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong"],
     intro: "Nếu bạn mới bắt đầu uống trà thảo mộc, trà hoa cúc mật ong Vạn An OCOP là lựa chọn dễ tiếp cận vì vị dịu, mùi nhẹ và cách pha nhanh. Sản phẩm phù hợp với người bận rộn muốn thay đồ uống ngọt bằng một lựa chọn nhẹ nhàng hơn.",
     toc: ["Hương vị thực tế", "Ưu điểm cho dân văn phòng", "Lưu ý trước khi dùng"],
     quickSummary: ["Dễ uống với người mới.", "Pha nhanh 3-5 phút.", "Hợp khung giờ chiều tối."],
@@ -265,9 +273,10 @@ export const posts: BlogPost[] = [
   {
     slug: "review-nu-hoa-oai-huong-lavender-say-kho",
     title: "Nụ Hoa Oải Hương Sấy Khô: thư giãn tinh thần sau giờ làm",
-    description: "Review trà lavender sấy khô: cảm nhận mùi vị, cách pha và ai nên cân nhắc trước khi dùng.",
+    description: "Đánh giá nụ hoa oải hương sấy khô: hương vị, cách pha và mức độ phù hợp cho routine tối.",
     category: "review-tra",
     productId: "tra-lavender-ngu-ngon",
+    relatedSlugs: ["tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong", "kien-thuc-co-ban-ve-tra-thao-moc", "routine-buoi-toi-15-phut-giam-cang-thang"],
     intro: "Nụ hoa oải hương sấy khô phù hợp với người muốn thư giãn tinh thần sau giờ làm việc căng thẳng. Mùi floral khá rõ nên trải nghiệm sẽ phụ thuộc khẩu vị từng người, nhưng nếu dùng đúng lượng và uống ấm, cảm giác dễ chịu thường rõ hơn.",
     toc: ["Mùi vị và trải nghiệm", "Đối tượng phù hợp", "Cách pha để dễ uống"],
     quickSummary: ["Mùi floral rõ.", "Nên pha nhẹ nếu mới dùng.", "Hợp routine thư giãn tối."],
@@ -285,9 +294,10 @@ export const posts: BlogPost[] = [
   {
     slug: "review-tra-gao-lut-dau-do-rang-cho-van-phong",
     title: "Trà Gạo Lứt Đậu Đỏ Rang: lựa chọn lành mạnh thay đồ ngọt",
-    description: "Đánh giá trà gạo lứt đậu đỏ rang: vị bùi, cách pha, ai nên dùng trong môi trường công sở.",
+    description: "Review trà gạo lứt đậu đỏ rang: vị bùi dễ uống, phù hợp người muốn giảm đồ uống ngọt.",
     category: "review-tra",
     productId: "tra-gao-lut-dau-do",
+    relatedSlugs: ["giam-stress-o-van-phong-bang-do-uong-lanh-manh", "5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay", "kien-thuc-co-ban-ve-tra-thao-moc"],
     intro: "Trà gạo lứt đậu đỏ rang là lựa chọn dễ uống cho người muốn thay dần nước ngọt hoặc trà sữa. Vị bùi nhẹ, cảm giác ấm bụng và ít kén khẩu vị giúp sản phẩm này phù hợp với nhịp sống văn phòng bận rộn hằng ngày.",
     toc: ["Vị trà có gì nổi bật", "Ai nên dùng", "Mẹo dùng hiệu quả"],
     quickSummary: ["Vị bùi nhẹ, dễ uống.", "Thay thế đồ ngọt hằng ngày.", "Phù hợp mang đi làm."],
@@ -305,9 +315,10 @@ export const posts: BlogPost[] = [
   {
     slug: "review-tra-hoa-nhai-no-say-kho-nguyen-bong",
     title: "Trà Hoa Nhài Nở Sấy Khô Nguyên Bông: thanh nhẹ, dễ duy trì",
-    description: "Bài review trà hoa nhài nguyên bông: hương vị, đối tượng phù hợp và cách uống cho dân văn phòng.",
+    description: "Trà hoa nhài nở sấy khô nguyên bông có dễ duy trì hằng ngày không? Đánh giá nhanh cho người mới.",
     category: "review-tra",
     productId: "tra-hoa-nhai-goji",
+    relatedSlugs: ["kien-thuc-co-ban-ve-tra-thao-moc", "5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay", "review-tra-hoa-cuc-mat-ong-van-an-ocop"],
     intro: "Trà hoa nhài nở sấy khô nguyên bông phù hợp với người thích hương hoa nhẹ và muốn một loại trà uống đều mỗi ngày. Vị thanh, hậu dịu giúp sản phẩm này dễ kết hợp với routine làm việc lẫn thư giãn buổi tối.",
     toc: ["Cảm nhận hương vị", "Phù hợp với ai", "Cách dùng gợi ý"],
     quickSummary: ["Hương nhài nhẹ.", "Dễ duy trì 1-2 ly/ngày.", "Hợp văn phòng và buổi tối."],
@@ -325,9 +336,10 @@ export const posts: BlogPost[] = [
   {
     slug: "review-tra-cam-que-hoa-hong-tao-do-hoa-nhai",
     title: "Trà cam quế hoa hồng, táo đỏ, hoa nhài: ấm dịu cuối ngày",
-    description: "Review chi tiết trà cam quế hoa hồng táo đỏ hoa nhài: mùi vị, đối tượng phù hợp và lưu ý.",
+    description: "Đánh giá trà cam quế hoa hồng, táo đỏ, hoa nhài: vị ấm dịu, phù hợp uống tối sớm.",
     category: "review-tra",
     productId: "tra-cam-thao-tao-do",
+    relatedSlugs: ["routine-buoi-toi-15-phut-giam-cang-thang", "giam-stress-o-van-phong-bang-do-uong-lanh-manh", "5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay"],
     intro: "Trà cam quế hoa hồng, táo đỏ, hoa nhài mang vị ngọt thanh tự nhiên và cảm giác ấm dịu, phù hợp cho tối sớm hoặc ngày mưa. Đây là lựa chọn đáng cân nhắc nếu bạn muốn giảm đồ uống ngọt nhưng vẫn giữ trải nghiệm dễ chịu.",
     toc: ["Điểm nổi bật của sản phẩm", "Ai nên cân nhắc dùng", "Cách pha cho vị cân bằng"],
     quickSummary: ["Mùi thảo mộc ấm.", "Vị ngọt thanh tự nhiên.", "Hợp uống tối sớm."],

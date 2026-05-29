@@ -27,7 +27,12 @@ export default function BlogPostPage({ params }: Props) {
   if (!post) notFound();
   const productForPost = post.productId ? products.find((p) => p.id === post.productId) : products[0];
 
-  const relatedPosts = posts.filter((item) => item.category === post.category && item.slug !== post.slug).slice(0, 3);
+  const relatedPosts = post.relatedSlugs && post.relatedSlugs.length > 0
+    ? post.relatedSlugs
+        .map((slug) => posts.find((item) => item.slug === slug))
+        .filter((item): item is (typeof posts)[number] => Boolean(item))
+        .slice(0, 3)
+    : posts.filter((item) => item.category === post.category && item.slug !== post.slug).slice(0, 3);
   const isReview = post.category === "review-tra";
   const updatedAt = "28/05/2026";
   const url = `https://trathugian.shop/bai-viet/${post.slug}/`;
