@@ -6,6 +6,7 @@ export function Header() {
       <div className="container nav">
         <Link href="/" className="brand" aria-label="Trà Thư Giãn">
           <img className="brand-image" src="/images/brand/logo.png" alt="Logo Trà Thư Giãn" />
+          <span className="brand-label">TRÀ THƯ GIÃN</span>
         </Link>
         <nav>
           <Link href="/">Trang chủ</Link>
