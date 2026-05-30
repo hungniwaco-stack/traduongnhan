@@ -1,56 +1,91 @@
-# Session Memory - Tra Thu Gian Affiliate
+﻿# Session Memory - Tra Thu Gian Affiliate
 
-Last updated: 2026-05-28
+Last updated: 2026-05-29
 
-## Project
-- Project path: `D:\NDGROUP\AI Agent Business Kit\tra-thu-gian-affiliate`
-- Framework: Next.js 14 + React 18 + TypeScript
-- Style direction: natural/relaxing, light green + cream + tea-brown
-- Language: Vietnamese content
+## Canonical Working Location (DO NOT ASK AGAIN)
+- Standalone root: `D:\Hungniwaco\Claude Code\tra-thu-gian-website`
+- App root: `D:\Hungniwaco\Claude Code\tra-thu-gian-website\tra-thu-gian-affiliate`
+- Always edit inside the app root above.
 
-## Brand/UI Decisions
-- Brand text in header: `TRA THU GIAN` was updated to accented, highlighted style with logo icon.
-- User prefers Vietnamese diacritics (no slug-looking labels in UI chips where possible).
-- Content-first affiliate style (review helpful first, affiliate second).
-
-## Affiliate Product Decisions
-- Tam sen product affiliate: `https://s.shopee.vn/5ApfBMndXs`
-- Hoa cuc mat ong product affiliate: `https://s.shopee.vn/70HK7MPvCJ`
-- Lavender product affiliate: `https://s.shopee.vn/8KmhiWBfIX`
-- Gao lut dau do product affiliate: `https://s.shopee.vn/5q5MkQnhX2`
-- Hoa nhai product affiliate: `https://s.shopee.vn/110704kJcg`
-- Cam que/hoa hong/tao do/hoa nhai affiliate: `https://s.shopee.vn/2LVUgtdj5Y`
-
-## Content Decisions
-- Added separate review-style posts for each tea type.
-- Removed redundant cards/posts when user requested.
-- Updated one article from 5 tea items to 6 tea items (title + intro + TOC + section list).
-
-## Deployment/GitHub
-- Repo: `https://github.com/hungniwaco-stack/trathugian`
+## Repo / Deploy (Locked)
+- Remote: `https://github.com/hungniwaco-stack/trathugian.git`
 - Branch: `main`
-- GitHub Pages deploy is configured via Actions workflow.
-- For custom domain `trathugian.shop`:
-  - `public/CNAME` is set to `trathugian.shop`
-  - Next config removed repo basePath so site serves from root domain.
+- Public URL: `https://hungniwaco-stack.github.io/trathugian/`
+- Deploy via GitHub Actions (Pages).
+- Typical propagation time: 1-3 minutes after push.
 
-## DNS (Hostinger) Target
-- `A @ -> 185.199.108.153`
-- `A @ -> 185.199.109.153`
-- `A @ -> 185.199.110.153`
-- `A @ -> 185.199.111.153`
-- `CNAME www -> hungniwaco-stack.github.io`
+## User Preferences (Locked)
+- Execute directly, minimal back-and-forth.
+- Push immediately when user asks.
+- Keep confirmations concise.
+- Vietnamese content, correct diacritics, readable typography.
 
-## Working Preferences From User
-- User wants direct execution with minimal back-and-forth.
-- User frequently asks quick content/title/link edits and expects immediate updates.
-- User prefers concise confirmation after changes.
+## Branding (Final)
+- Header logo image source: `public/images/brand/logo.png`.
+- Header text must show: `TRÀ THƯ GIÃN` (uppercase, bold, prominent).
+- Current logo source file originally provided: `Logo.png` at app root.
 
-## Notes For Next Session
-- Start by checking `data/site.ts` first for most content/link updates.
-- If user says "chưa cập nhật", verify with `rg` and patch immediately.
-- For GitHub Pages issues, check:
-  1) Actions deploy status
-  2) `Settings > Pages > Custom domain`
-  3) DNS resolution
-  4) HTTPS certificate propagation
+## Typography (Final)
+- Vietnamese typography standardized globally in `app/globals.css`:
+  - VN-safe font stack
+  - unified H1/H2/H3 hierarchy
+  - improved line-height for long headings
+  - overflow-wrap to prevent breakage
+- Navbar text style:
+  - bold, high contrast
+  - hover underline accent
+
+## Homepage Design (Final)
+- Keep hero banner + mini weekly banner.
+- Do not show internal changelog/dev update block on homepage.
+
+## Product Image Mapping (Locked Order)
+Folder: `public/images/products/`
+1. `01.webp` -> Trà Tâm Sen (`tam-sen-say-kho`)
+2. `02.webp` -> Trà Hoa Cúc Mật Ong (`tra-hoa-cuc-mat-ong`)
+3. `03.webp` -> Lavender (`tra-lavender-ngu-ngon`)
+4. `04.webp` -> Gạo Lứt Đậu Đỏ (`tra-gao-lut-dau-do`)
+5. `05.webp` -> Hoa Nhài Nở (`tra-hoa-nhai-goji`)
+6. `06.jpg` -> Cam Quế Hoa Hồng (`tra-cam-thao-tao-do`)
+
+## Affiliate Links (Locked)
+- Tam sen: `https://s.shopee.vn/5ApfBMndXs`
+- Hoa cúc mật ong: `https://s.shopee.vn/70HK7MPvCJ`
+- Lavender: `https://s.shopee.vn/8KmhiWBfIX`
+- Gạo lứt đậu đỏ: `https://s.shopee.vn/5q5MkQnhX2`
+- Hoa nhài nở: `https://s.shopee.vn/110704kJcg`
+- Cam quế hoa hồng: `https://s.shopee.vn/2LVUgtdj5Y`
+
+## Content / SEO-GEO Rules (Locked)
+- Avoid prefixing every title with "Review".
+- Article template should include:
+  - direct intro
+  - TOC
+  - quick summary
+  - suitability blocks
+  - FAQ
+  - compare/checklist blocks for review intent
+- Structured data enabled: `Article`, `FAQPage`, `BreadcrumbList`, `Product`.
+- `robots.ts` + `sitemap.ts` are required and present.
+- Date display format must be: `dd/mm/yyyy`.
+
+## Contact (Locked)
+- Contact email in `/lien-he`: `hatmuadem@gmail.com`.
+
+## 10-Day SEO Sprint Status
+- Plan chosen: 10-day sprint (not 30-day).
+- Day 1 completed and pushed in commit: `8c5d944`
+  - title/meta intent optimization
+  - internal linking map via `relatedSlugs`
+  - category SEO description improvements
+- Day 2 completed (local, pending push)
+  - upgraded Article schema `dateModified` to ISO format (`yyyy-mm-dd`) for machine readability
+  - added conditional `Product` JSON-LD on review posts in `app/bai-viet/[slug]/page.tsx`
+  - kept UI date format `dd/mm/yyyy` unchanged for Vietnamese readability
+
+## Operational Playbook
+- If user says "chưa cập nhật":
+  1) confirm commit on `main`
+  2) remind 1-3 min deploy delay
+  3) hard refresh public URL
+- Prefer public URL validation over localhost when in-app loopback is unstable.

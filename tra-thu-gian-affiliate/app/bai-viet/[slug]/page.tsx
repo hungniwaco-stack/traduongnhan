@@ -35,6 +35,8 @@ export default function BlogPostPage({ params }: Props) {
     : posts.filter((item) => item.category === post.category && item.slug !== post.slug).slice(0, 3);
   const isReview = post.category === "review-tra";
   const updatedAt = "28/05/2026";
+  const [day, month, year] = updatedAt.split("/");
+  const updatedAtIso = `${year}-${month}-${day}`;
   const url = `https://trathugian.shop/bai-viet/${post.slug}/`;
 
   const breadcrumbSchema = {
@@ -54,7 +56,7 @@ export default function BlogPostPage({ params }: Props) {
     description: post.description,
     inLanguage: "vi-VN",
     mainEntityOfPage: url,
-    dateModified: updatedAt,
+    dateModified: updatedAtIso,
     author: { "@type": "Organization", name: "Trà Thư Giãn" },
     publisher: { "@type": "Organization", name: "Trà Thư Giãn" }
   };
@@ -69,11 +71,31 @@ export default function BlogPostPage({ params }: Props) {
     }))
   };
 
+  const productSchema = isReview && productForPost
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        name: productForPost.name,
+        description: productForPost.shortDesc,
+        image: `https://trathugian.shop${productForPost.image}`,
+        category: "Trà thảo mộc",
+        brand: { "@type": "Brand", name: "Trà Thư Giãn" },
+        url,
+        offers: {
+          "@type": "Offer",
+          url: productForPost.affiliateUrl,
+          availability: "https://schema.org/InStock",
+          priceCurrency: "VND"
+        }
+      }
+    : null;
+
   return (
     <article className="article">
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={articleSchema} />
       <JsonLd data={faqSchema} />
+      {productSchema ? <JsonLd data={productSchema} /> : null}
 
       <Breadcrumb items={[{ label: "Trang chủ", href: "/" }, { label: categoryLabelMap[post.category], href: `/${post.category}` }, { label: post.title }]} />
       <h1>{post.title}</h1>
