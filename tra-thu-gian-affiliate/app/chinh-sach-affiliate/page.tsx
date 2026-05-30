@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Chính sách affiliate | Trà Thư Giãn",
-  description: "Chính sách minh bạch affiliate của Trà Thư Giãn và cam kết biên tập trung thực."
+  description: "Chính sách minh bạch affiliate của Trà Thư Giãn và cam kết biên tập trung thực.",
+  alternates: { canonical: "/chinh-sach-affiliate/" }
 };
 
 export default function AffiliatePolicyPage() {

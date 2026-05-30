@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Liên hệ | Trà Thư Giãn",
-  description: "Thông tin liên hệ và hợp tác nội dung với Trà Thư Giãn."
+  description: "Thông tin liên hệ và hợp tác nội dung với Trà Thư Giãn.",
+  alternates: { canonical: "/lien-he/" }
 };
 
 export default function ContactPage() {

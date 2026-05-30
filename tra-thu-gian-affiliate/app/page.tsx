@@ -5,7 +5,8 @@ import { ArticleCard, CategoryCard, ProductCard } from "@/components/CardSet";
 
 export const metadata: Metadata = {
   title: "Trang chủ | Trà thư giãn cho dân văn phòng",
-  description: "Khám phá trà ngủ ngon, review trà mới và healthy routine nhẹ nhàng cho dân văn phòng."
+  description: "Khám phá trà ngủ ngon, review trà mới và healthy routine nhẹ nhàng cho dân văn phòng.",
+  alternates: { canonical: "/" }
 };
 
 export default function HomePage() {

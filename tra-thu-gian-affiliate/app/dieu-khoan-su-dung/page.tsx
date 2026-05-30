@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Điều khoản sử dụng | Trà Thư Giãn",
-  description: "Điều khoản sử dụng nội dung trên website Trà Thư Giãn."
+  description: "Điều khoản sử dụng nội dung trên website Trà Thư Giãn.",
+  alternates: { canonical: "/dieu-khoan-su-dung/" }
 };
 
 export default function TermsPage() {

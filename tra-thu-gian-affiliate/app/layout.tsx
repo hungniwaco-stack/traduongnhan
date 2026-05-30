@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://trathugian.shop"),
   title: "Trà thư giãn & healthy lifestyle cho dân văn phòng",
   description: "Blog affiliate trà thảo mộc: chia sẻ review thực tế, routine nhẹ nhàng và gợi ý sản phẩm phù hợp.",
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "vi_VN",

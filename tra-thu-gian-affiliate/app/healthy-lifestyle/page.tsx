@@ -3,7 +3,8 @@ import CategoryPage from "@/components/CategoryPage";
 
 export const metadata: Metadata = {
   title: "Healthy Lifestyle | Blog trà thư giãn",
-  description: "Healthy routine buổi tối và lối sống nhẹ nhàng cho dân văn phòng."
+  description: "Healthy routine buổi tối và lối sống nhẹ nhàng cho dân văn phòng.",
+  alternates: { canonical: "/healthy-lifestyle/" }
 };
 
 export default function Page() {

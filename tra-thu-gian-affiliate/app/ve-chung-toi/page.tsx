@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Về chúng tôi | Trà Thư Giãn",
-  description: "Giới thiệu dự án Trà Thư Giãn, tiêu chí biên tập và nguyên tắc minh bạch nội dung."
+  description: "Giới thiệu dự án Trà Thư Giãn, tiêu chí biên tập và nguyên tắc minh bạch nội dung.",
+  alternates: { canonical: "/ve-chung-toi/" }
 };
 
 export default function AboutPage() {
