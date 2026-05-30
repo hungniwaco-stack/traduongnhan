@@ -13,8 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ve-chung-toi",
     "/chinh-sach-affiliate",
     "/lien-he",
-    "/dieu-khoan-su-dung",
-    "/review/tra-tam-sen-say-kho-giup-ngu-ngon-thanh-nhiet"
+    "/dieu-khoan-su-dung"
   ];
 
   const staticEntries = staticRoutes.map((path) => ({
