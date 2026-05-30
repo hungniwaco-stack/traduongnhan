@@ -106,7 +106,7 @@ export const products: Product[] = [
     howToBrew: "Nấu theo hướng dẫn chi tiết của nhà bán.",
     experience: "Tiện chuẩn bị sẵn nhiều mẻ dùng trong tuần.",
     caution: "Bảo quản kín, khô ráo để giữ chất lượng.",
-    affiliateUrl: "https://s.shopee.vn/4qCseh5Tlq"
+    affiliateUrl: "https://s.shopee.vn/4qCseh5TIq"
   },
   {
     id: "nhai-goji-tam-sen",
@@ -366,6 +366,7 @@ export const posts: BlogPost[] = [
     ]
   }
 ];
+
 
 
 
