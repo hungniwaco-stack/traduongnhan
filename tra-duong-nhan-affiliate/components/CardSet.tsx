@@ -1,6 +1,7 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { BlogPost, FAQ, Product } from "@/data/site";
 import { categoryLabelMap } from "@/data/site";
+import { withBasePath } from "@/lib/withBasePath";
 import AffiliateButton from "./AffiliateButton";
 
 const formatVnd = (value: number) => `${value.toLocaleString("vi-VN")}đ`;
@@ -21,7 +22,7 @@ export function ProductCard({ product }: { product: Product }) {
     : 0;
   return (
     <article className="card">
-      <img className="product-image" src={product.image} alt={product.name} loading="lazy" />
+      <img className="product-image" src={withBasePath(product.image)} alt={product.name} loading="lazy" />
       <h3>{product.name}</h3>
       <p className="price-row">
         <span className="price-sale">{formatVnd(product.priceSale)}</span>

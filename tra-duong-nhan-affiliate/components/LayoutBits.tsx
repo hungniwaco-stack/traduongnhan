@@ -1,11 +1,12 @@
 ﻿import Link from "next/link";
+import { withBasePath } from "@/lib/withBasePath";
 
 export function Header() {
   return (
     <header className="site-header">
       <div className="container nav">
         <Link href="/" className="brand" aria-label="Trà Dưỡng Nhan">
-          <img className="brand-image" src="/images/brand/logo.png" alt="Logo Trà Dưỡng Nhan" />
+          <img className="brand-image" src={withBasePath("/images/brand/logo.png")} alt="Logo Trà Dưỡng Nhan" />
           <span className="brand-label">TRÀ DƯỠNG NHAN</span>
         </Link>
         <nav>
