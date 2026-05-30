@@ -17,7 +17,8 @@ export function ArticleCard({ post }: { post: BlogPost }) {
 }
 
 export function ProductCard({ product }: { product: Product }) {
-  const discountPercent = product.priceOriginal > 0
+  const hasDiscount = product.priceOriginal > product.priceSale;
+  const discountPercent = hasDiscount
     ? Math.round(((product.priceOriginal - product.priceSale) / product.priceOriginal) * 100)
     : 0;
   return (
@@ -26,8 +27,8 @@ export function ProductCard({ product }: { product: Product }) {
       <h3>{product.name}</h3>
       <p className="price-row">
         <span className="price-sale">{formatVnd(product.priceSale)}</span>
-        <span className="price-original">{formatVnd(product.priceOriginal)}</span>
-        {discountPercent > 0 ? <span className="price-badge">-{discountPercent}%</span> : null}
+        {hasDiscount ? <span className="price-original">{formatVnd(product.priceOriginal)}</span> : null}
+        {hasDiscount && discountPercent > 0 ? <span className="price-badge">-{discountPercent}%</span> : null}
       </p>
       <p>{product.shortDesc}</p>
       <ul>{product.benefits.map((b) => <li key={b}>{b}</li>)}</ul>
@@ -58,3 +59,4 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
     </section>
   );
 }
+
