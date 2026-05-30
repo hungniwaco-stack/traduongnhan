@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import CategoryPage from "@/components/CategoryPage";
 
 export const metadata: Metadata = {
-  title: "Trà ngủ ngon | Blog trà thư giãn",
-  description: "Chuyên mục trà ngủ ngon cho dân văn phòng: gợi ý trà thảo mộc hỗ trợ thư giãn và thói quen trước khi ngủ."
+  title: "Trà ngủ ngon cho dân văn phòng: 6 lựa chọn dễ bắt đầu",
+  description: "Nên uống trà gì để dễ ngủ hơn? Xem 6 lựa chọn trà thảo mộc, cách uống trước giờ ngủ và lưu ý cho người mới."
 };
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
     <CategoryPage
       slug="tra-ngu-ngon"
       title="Trà ngủ ngon"
-      desc="Trà ngủ ngon cho dân văn phòng: các bài viết chọn trà và thói quen tối nhẹ nhàng."
+      desc="Nên uống trà gì để ngủ ngon hơn? Tổng hợp bài chọn trà và routine buổi tối cho dân văn phòng."
     />
   );
 }

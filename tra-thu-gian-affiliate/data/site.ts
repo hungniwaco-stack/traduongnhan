@@ -130,7 +130,7 @@ export const posts: BlogPost[] = [
   {
     slug: "tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong",
     title: "Trà ngủ ngon cho dân văn phòng: nên chọn loại nào?",
-    description: "Gợi ý trà thảo mộc hỗ trợ thư giãn và dễ vào giấc hơn cho dân văn phòng, kèm cách uống trước giờ ngủ.",
+    description: "Nên chọn trà nào để ngủ ngon hơn? Gợi ý nhóm trà dễ uống cho dân văn phòng, kèm cách dùng trước giờ ngủ.",
     category: "tra-ngu-ngon",
     relatedSlugs: ["5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay", "routine-buoi-toi-15-phut-giam-cang-thang", "review-tra-tam-sen-say-kho-cho-nguoi-kho-ngu"],
     intro: "Nếu bạn hay trằn trọc vì đầu óc còn căng sau giờ làm, các loại trà thảo mộc dịu nhẹ có thể hỗ trợ thư giãn và tạo tín hiệu nghỉ ngơi cho cơ thể. Chọn đúng loại, đúng thời điểm sẽ giúp routine tối ổn định hơn.",
@@ -171,7 +171,7 @@ export const posts: BlogPost[] = [
   {
     slug: "kien-thuc-co-ban-ve-tra-thao-moc",
     title: "Kiến thức trà thảo mộc cho người mới: cách chọn và pha đúng",
-    description: "Hướng dẫn đọc thành phần, chọn trà phù hợp và pha trà thảo mộc đúng cách cho người mới bắt đầu.",
+    description: "Người mới nên bắt đầu từ đâu? Hướng dẫn chọn trà thảo mộc, đọc thành phần và pha đúng để dễ uống mỗi ngày.",
     category: "kien-thuc-tra",
     relatedSlugs: ["review-tra-hoa-cuc-mat-ong-van-an-ocop", "review-nu-hoa-oai-huong-lavender-say-kho", "tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong"],
     intro: "Trà thảo mộc không phải thuốc và cũng không thay thế điều trị chuyên môn, nhưng thường được dùng để hỗ trợ thư giãn, cân bằng thói quen sinh hoạt. Hiểu đúng thành phần, thời điểm uống và cách pha sẽ giúp bạn dùng trà hiệu quả hơn.",
@@ -190,7 +190,7 @@ export const posts: BlogPost[] = [
   {
     slug: "giam-stress-o-van-phong-bang-do-uong-lanh-manh",
     title: "Giảm stress văn phòng bằng đồ uống lành mạnh: bắt đầu từ đâu?",
-    description: "3 thay đổi nhỏ trong đồ uống mỗi ngày giúp dân văn phòng giảm căng thẳng và ổn định năng lượng.",
+    description: "3 thay đổi nhỏ trong đồ uống giúp giảm stress văn phòng, ổn định năng lượng và tránh tụt mood cuối ngày.",
     category: "giam-stress",
     relatedSlugs: ["routine-buoi-toi-15-phut-giam-cang-thang", "review-tra-gao-lut-dau-do-rang-cho-van-phong", "5-loai-tra-cho-dan-van-phong-de-uong-ban-ngay"],
     intro: "Để giảm stress khi làm việc, bắt đầu từ đồ uống mỗi ngày là cách dễ nhất. Chuyển dần từ nước ngọt sang trà thảo mộc hoặc trà rang có thể giúp bạn ổn định năng lượng tốt hơn và giảm cảm giác bồn chồn cuối ngày.",

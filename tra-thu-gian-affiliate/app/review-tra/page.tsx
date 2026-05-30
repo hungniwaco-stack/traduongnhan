@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import CategoryPage from "@/components/CategoryPage";
 
 export const metadata: Metadata = {
-  title: "Review trà | Blog trà thư giãn",
-  description: "Review trà thảo mộc cho dân văn phòng: đánh giá thực tế hương vị, độ tiện lợi và đối tượng phù hợp."
+  title: "Review trà thảo mộc: bài nào hợp nhu cầu của bạn?",
+  description: "Đánh giá thực tế trà thảo mộc cho dân văn phòng: hương vị, cách pha, đối tượng phù hợp và lưu ý trước khi mua."
 };
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
     <CategoryPage
       slug="review-tra"
       title="Review trà"
-      desc="Review trà thảo mộc cho dân văn phòng: đánh giá hương vị, độ tiện lợi và đối tượng phù hợp."
+      desc="Review trà thảo mộc thực tế: vị trà, độ tiện, nhóm phù hợp và checklist trước khi chọn."
     />
   );
 }
