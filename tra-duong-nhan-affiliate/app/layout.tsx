@@ -1,7 +1,20 @@
 ﻿import type { Metadata } from "next";
 import Script from "next/script";
+import { Noto_Sans, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components/LayoutBits";
+
+const notoSans = Noto_Sans({
+  subsets: ["vietnamese", "latin"],
+  variable: "--font-sans",
+  display: "swap"
+});
+
+const notoSerif = Noto_Serif({
+  subsets: ["vietnamese", "latin"],
+  variable: "--font-serif",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://traduongnhan.shop"),
@@ -22,7 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="vi">
-      <body>
+      <body className={`${notoSans.variable} ${notoSerif.variable}`}>
         {gaId ? (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
