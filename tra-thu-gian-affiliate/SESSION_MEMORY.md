@@ -82,6 +82,15 @@ Folder: `public/images/products/`
   - upgraded Article schema `dateModified` to ISO format (`yyyy-mm-dd`) for machine readability
   - added conditional `Product` JSON-LD on review posts in `app/bai-viet/[slug]/page.tsx`
   - kept UI date format `dd/mm/yyyy` unchanged for Vietnamese readability
+  - follow-up fix pushed: removed `Product` JSON-LD to avoid invalid merchant snippet requirements on affiliate pages
+- Day 3 completed (content optimization)
+  - refined review support data in `data/site.ts` with `bestFor` / `notFor` across review posts
+  - improved category/trust page readability and Vietnamese typography consistency
+- Day 6 partially completed (trust signals)
+  - refreshed `/ve-chung-toi`, `/lien-he`, `/dieu-khoan-su-dung`, `/chinh-sach-affiliate` with clearer policy language
+- Day 7 check completed
+  - production build passed successfully (`npm run build`)
+  - `robots.ts` and `sitemap.ts` validated as present and serving static output
 
 ## Operational Playbook
 - If user says "chưa cập nhật":

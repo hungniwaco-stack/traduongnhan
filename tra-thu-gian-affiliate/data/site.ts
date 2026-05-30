@@ -259,6 +259,8 @@ export const posts: BlogPost[] = [
     intro: "Nếu bạn mới bắt đầu uống trà thảo mộc, trà hoa cúc mật ong Vạn An OCOP là lựa chọn dễ tiếp cận vì vị dịu, mùi nhẹ và cách pha nhanh. Sản phẩm phù hợp với người bận rộn muốn thay đồ uống ngọt bằng một lựa chọn nhẹ nhàng hơn.",
     toc: ["Hương vị thực tế", "Ưu điểm cho dân văn phòng", "Lưu ý trước khi dùng"],
     quickSummary: ["Dễ uống với người mới.", "Pha nhanh 3-5 phút.", "Hợp khung giờ chiều tối."],
+    bestFor: ["Người mới bắt đầu uống trà thảo mộc.", "Dân văn phòng cần lựa chọn pha nhanh."],
+    notFor: ["Người dị ứng với phấn hoa.", "Người cần đồ uống không có vị ngọt tự nhiên."],
     sections: [
       { heading: "Hương vị thực tế", points: ["Mùi hoa cúc dịu", "Vị ngọt nhẹ tự nhiên", "Dễ uống khi còn ấm"] },
       { heading: "Ưu điểm cho dân văn phòng", points: ["Pha nhanh 3-5 phút", "Tiện mang theo khi đi làm", "Phù hợp khung giờ chiều muộn"] },
@@ -280,6 +282,8 @@ export const posts: BlogPost[] = [
     intro: "Nụ hoa oải hương sấy khô phù hợp với người muốn thư giãn tinh thần sau giờ làm việc căng thẳng. Mùi floral khá rõ nên trải nghiệm sẽ phụ thuộc khẩu vị từng người, nhưng nếu dùng đúng lượng và uống ấm, cảm giác dễ chịu thường rõ hơn.",
     toc: ["Mùi vị và trải nghiệm", "Đối tượng phù hợp", "Cách pha để dễ uống"],
     quickSummary: ["Mùi floral rõ.", "Nên pha nhẹ nếu mới dùng.", "Hợp routine thư giãn tối."],
+    bestFor: ["Người thích hương hoa rõ.", "Người cần ritual thư giãn sau giờ làm."],
+    notFor: ["Người nhạy với mùi floral.", "Người muốn vị trà đậm kiểu rang."],
     sections: [
       { heading: "Mùi vị và trải nghiệm", points: ["Mùi hoa đặc trưng, rõ", "Hậu vị dịu nếu pha vừa", "Hợp uống chậm vào buổi tối"] },
       { heading: "Đối tượng phù hợp", points: ["Người làm việc trí óc căng thẳng", "Người thích trà hương hoa", "Người cần ritual thư giãn cuối ngày"] },
@@ -301,6 +305,8 @@ export const posts: BlogPost[] = [
     intro: "Trà gạo lứt đậu đỏ rang là lựa chọn dễ uống cho người muốn thay dần nước ngọt hoặc trà sữa. Vị bùi nhẹ, cảm giác ấm bụng và ít kén khẩu vị giúp sản phẩm này phù hợp với nhịp sống văn phòng bận rộn hằng ngày.",
     toc: ["Vị trà có gì nổi bật", "Ai nên dùng", "Mẹo dùng hiệu quả"],
     quickSummary: ["Vị bùi nhẹ, dễ uống.", "Thay thế đồ ngọt hằng ngày.", "Phù hợp mang đi làm."],
+    bestFor: ["Người muốn giảm nước ngọt mỗi ngày.", "Người thích vị ngũ cốc dễ uống."],
+    notFor: ["Người cần đồ uống thay bữa ăn.", "Người không hợp đồ uống có mùi rang."],
     sections: [
       { heading: "Vị trà có gì nổi bật", points: ["Mùi rang thơm", "Hậu vị bùi nhẹ", "Dễ uống cả ngày"] },
       { heading: "Ai nên dùng", points: ["Người muốn giảm đồ uống nhiều đường", "Người thích trà vị ngũ cốc", "Người cần đồ uống ấm nhẹ nhàng"] },
@@ -322,6 +328,8 @@ export const posts: BlogPost[] = [
     intro: "Trà hoa nhài nở sấy khô nguyên bông phù hợp với người thích hương hoa nhẹ và muốn một loại trà uống đều mỗi ngày. Vị thanh, hậu dịu giúp sản phẩm này dễ kết hợp với routine làm việc lẫn thư giãn buổi tối.",
     toc: ["Cảm nhận hương vị", "Phù hợp với ai", "Cách dùng gợi ý"],
     quickSummary: ["Hương nhài nhẹ.", "Dễ duy trì 1-2 ly/ngày.", "Hợp văn phòng và buổi tối."],
+    bestFor: ["Người thích hương nhài dịu nhẹ.", "Người cần trà uống đều mỗi ngày."],
+    notFor: ["Người nhạy với mùi hoa.", "Người muốn vị trà mạnh và đậm."],
     sections: [
       { heading: "Cảm nhận hương vị", points: ["Hương nhài nhẹ, không gắt", "Nước trà thanh", "Dễ uống khi pha vừa"] },
       { heading: "Phù hợp với ai", points: ["Người thích trà hương hoa", "Dân văn phòng cần đồ uống nhẹ", "Người muốn giảm nước ngọt buổi chiều"] },
@@ -343,6 +351,8 @@ export const posts: BlogPost[] = [
     intro: "Trà cam quế hoa hồng, táo đỏ, hoa nhài mang vị ngọt thanh tự nhiên và cảm giác ấm dịu, phù hợp cho tối sớm hoặc ngày mưa. Đây là lựa chọn đáng cân nhắc nếu bạn muốn giảm đồ uống ngọt nhưng vẫn giữ trải nghiệm dễ chịu.",
     toc: ["Điểm nổi bật của sản phẩm", "Ai nên cân nhắc dùng", "Cách pha cho vị cân bằng"],
     quickSummary: ["Mùi thảo mộc ấm.", "Vị ngọt thanh tự nhiên.", "Hợp uống tối sớm."],
+    bestFor: ["Người muốn đồ uống ấm dịu cuối ngày.", "Người đang giảm dần đồ uống nhiều đường."],
+    notFor: ["Người không hợp mùi quế.", "Người muốn uống quá sát giờ ngủ."],
     sections: [
       { heading: "Điểm nổi bật của sản phẩm", points: ["Mùi thơm thảo mộc ấm", "Vị ngọt thanh", "Hợp uống chậm để thư giãn"] },
       { heading: "Ai nên cân nhắc dùng", points: ["Người muốn đồ uống tối nhẹ nhàng", "Người cần thay nước ngọt", "Người thích trà có mùi quế-hồng nhẹ"] },

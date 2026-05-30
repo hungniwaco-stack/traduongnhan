@@ -11,8 +11,7 @@ export default function ContactPage() {
       <h1>Liên hệ</h1>
       <p>Nếu bạn cần góp ý nội dung hoặc hợp tác media, vui lòng liên hệ qua email:</p>
       <p><strong>hatmuadem@gmail.com</strong></p>
-      <p>Chúng tôi thường phản hồi trong 24-48 giờ làm việc.</p>
+      <p>Thời gian phản hồi thường trong 24-48 giờ làm việc.</p>
     </section>
   );
 }
-
