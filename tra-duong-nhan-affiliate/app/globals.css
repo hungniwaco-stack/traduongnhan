@@ -67,7 +67,7 @@ li {
   gap: .7rem;
 }
 .brand-image {
-  height: 56px;
+  height: 76px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -212,7 +212,7 @@ li {
   .hero { padding-top: 2.4rem; }
   .nav { align-items: flex-start; flex-direction: column; }
   .mini-banner { flex-direction: column; align-items: flex-start; }
-  .brand-image { height: 48px; }
+  .brand-image { height: 62px; }
   .brand-label { font-size: 1.06rem; letter-spacing: .06em; }
   .article {
     padding-bottom: 5.8rem;
