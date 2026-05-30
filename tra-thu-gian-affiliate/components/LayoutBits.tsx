@@ -41,6 +41,7 @@ export function Footer() {
         <div>
           <h3>Disclaimer sức khỏe</h3>
           <p>Nội dung trên website chỉ mang tính tham khảo, không thay thế tư vấn y tế chuyên môn.</p>
+          <p>Một số liên kết là affiliate và có thể mang lại hoa hồng nhỏ cho đội ngũ biên tập.</p>
         </div>
       </div>
     </footer>

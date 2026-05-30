@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Về chúng tôi | Trà Thư Giãn",
-  description: "Giới thiệu về dự án Trà Thư Giãn, tiêu chí nội dung và nguyên tắc review minh bạch."
+  description: "Giới thiệu dự án Trà Thư Giãn, tiêu chí biên tập và nguyên tắc minh bạch nội dung."
 };
 
 export default function AboutPage() {
   return (
     <section className="article">
       <h1>Về chúng tôi</h1>
-      <p>Trà Thư Giãn là blog dành cho dân văn phòng, tập trung vào trà thảo mộc, routine nhẹ nhàng và thói quen sống cân bằng.</p>
+      <p>Trà Thư Giãn là blog dành cho dân văn phòng, tập trung vào trà thảo mộc, routine nhẹ nhàng và lối sống cân bằng.</p>
 
       <h2>Tiêu chí biên tập</h2>
       <ul>
@@ -23,6 +23,8 @@ export default function AboutPage() {
 
       <h2>Phạm vi nội dung</h2>
       <p>Nội dung trên website chỉ mang tính tham khảo thông tin, không thay thế tư vấn y tế chuyên môn.</p>
+
+      <p><strong>Cập nhật lần cuối:</strong> 30/05/2026</p>
     </section>
   );
 }
