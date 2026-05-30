@@ -34,7 +34,7 @@ export default function BlogPostPage({ params }: Props) {
         .slice(0, 3)
     : posts.filter((item) => item.category === post.category && item.slug !== post.slug).slice(0, 3);
   const isReview = post.category === "review-tra";
-  const updatedAt = "28/05/2026";
+  const updatedAt = "30/05/2026";
   const [day, month, year] = updatedAt.split("/");
   const updatedAtIso = `${year}-${month}-${day}`;
   const url = `https://trathugian.shop/bai-viet/${post.slug}/`;
