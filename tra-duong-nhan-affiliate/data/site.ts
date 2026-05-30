@@ -54,7 +54,7 @@ export const products: Product[] = [
     image: "/images/products/01.jpg",
     priceOriginal: 105000,
     priceSale: 83000,
-    shortDesc: "Giá bán: 83.000đ (giá gốc 105.000đ). Bộ chè dưỡng nhan 14 vị, dễ nấu và dễ dùng hằng ngày.",
+    shortDesc: "Giá bán: 83.000đ. Bộ chè dưỡng nhan 14 vị, dễ nấu và dễ dùng hằng ngày.",
     benefits: ["Công thức 14 vị dưỡng nhan", "Phù hợp nấu tại nhà", "Giá tốt cho người mới bắt đầu"],
     ingredients: "Set chè dưỡng nhan 14 vị (theo mô tả nhà bán).",
     whoFor: "Người muốn bắt đầu routine dưỡng nhan tại nhà với set lớn 500gr.",
@@ -69,7 +69,7 @@ export const products: Product[] = [
     image: "/images/products/02.jpg",
     priceOriginal: 78000,
     priceSale: 78000,
-    shortDesc: "Giá bán: 78.000đ (giá gốc 78.000đ). Set túi/gói tiện lợi cho người bận rộn.",
+    shortDesc: "Giá bán: 78.000đ. Set túi/gói tiện lợi cho người bận rộn.",
     benefits: ["Dạng set nhiều gói tiện dùng", "Phù hợp dân văn phòng", "Giữ thói quen uống đều"],
     ingredients: "Tuyết yến và thảo mộc dưỡng nhan (theo mô tả nhà bán).",
     whoFor: "Người muốn giải pháp nhanh, ít chuẩn bị.",
@@ -84,7 +84,7 @@ export const products: Product[] = [
     image: "/images/products/03.jpg",
     priceOriginal: 85000,
     priceSale: 85000,
-    shortDesc: "Giá bán: 85.000đ (giá gốc 85.000đ). Dòng trà thảo mộc đa công dụng theo mô tả shop.",
+    shortDesc: "Giá bán: 85.000đ. Dòng trà thảo mộc đa công dụng theo mô tả shop.",
     benefits: ["Hỗ trợ routine làm đẹp", "Dễ dùng mỗi ngày", "Mức giá ổn định"],
     ingredients: "Thành phần theo công bố của nhà bán trên Shopee.",
     whoFor: "Ngu?i t�m d�ng tr� du?ng nhan k?t h?p thu gi�n nh?.",
@@ -99,7 +99,7 @@ export const products: Product[] = [
     image: "/images/products/04.jpg",
     priceOriginal: 525000,
     priceSale: 439000,
-    shortDesc: "Giá bán: 439.000đ (giá gốc 525.000đ). Combo dung lượng lớn phù hợp dùng lâu dài.",
+    shortDesc: "Giá bán: 439.000đ. Combo dung lượng lớn phù hợp dùng lâu dài.",
     benefits: ["Khối lượng lớn 4kg", "Phù hợp gia đình dùng chung", "Tiết kiệm theo set"],
     ingredients: "Set nguyên liệu 14 vị theo mô tả nhà bán.",
     whoFor: "Người muốn mua combo lớn để dùng dài hạn.",
@@ -114,7 +114,7 @@ export const products: Product[] = [
     image: "/images/products/05.jpg",
     priceOriginal: 80000,
     priceSale: 70000,
-    shortDesc: "Giá bán: 70.000đ (giá gốc 80.000đ). Set dưỡng nhan tự nhiên, hướng đến người mới.",
+    shortDesc: "Giá bán: 70.000đ. Set dưỡng nhan tự nhiên, hướng đến người mới.",
     benefits: ["Giá mềm, dễ tiếp cận", "Nguyên liệu tự nhiên", "Dễ nấu tại nhà"],
     ingredients: "Set thất bạch ẩm và nguyên liệu dưỡng nhan theo shop.",
     whoFor: "Người muốn thử trà dưỡng nhan ngân sách thấp.",
@@ -129,7 +129,7 @@ export const products: Product[] = [
     image: "/images/products/06.jpg",
     priceOriginal: 150000,
     priceSale: 105000,
-    shortDesc: "Giá bán: 105.000đ (giá gốc 150.000đ). Combo quà tặng kèm, phù hợp mua dùng hoặc biếu.",
+    shortDesc: "Giá bán: 105.000đ. Combo quà tặng kèm, phù hợp mua dùng hoặc biếu.",
     benefits: ["Combo 2 set 500g", "Có quà tặng kèm", "Mức giảm giá tốt"],
     ingredients: "Set 15 vị dưỡng nhan + quà tặng theo mô tả nhà bán.",
     whoFor: "Người muốn combo đủ dùng nhiều ngày với chi phí tốt.",
@@ -366,5 +366,6 @@ export const posts: BlogPost[] = [
     ]
   }
 ];
+
 
 
