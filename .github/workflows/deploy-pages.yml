@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: tra-thu-gian-affiliate
+        working-directory: tra-duong-nhan-affiliate
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: tra-thu-gian-affiliate/package-lock.json
+          cache-dependency-path: tra-duong-nhan-affiliate/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -40,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: tra-thu-gian-affiliate/out
+          path: tra-duong-nhan-affiliate/out
 
   deploy:
     environment:
