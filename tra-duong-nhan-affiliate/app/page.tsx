@@ -32,6 +32,24 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <h2>Cam kết minh bạch</h2>
+        <div className="grid grid-3">
+          <article className="card trust-card">
+            <h3>Đánh giá thực tế</h3>
+            <p>Nội dung review tập trung vào trải nghiệm sử dụng và độ phù hợp theo nhu cầu.</p>
+          </article>
+          <article className="card trust-card">
+            <h3>Affiliate minh bạch</h3>
+            <p>Một số liên kết là affiliate. Giá không đổi và chúng tôi luôn ưu tiên nội dung hữu ích.</p>
+          </article>
+          <article className="card trust-card">
+            <h3>Kiểm duyệt cập nhật</h3>
+            <p>Thông tin giá và link được rà soát định kỳ để hạn chế link lỗi hoặc sai ưu đãi.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section">
         <h2>Bài viết nổi bật về trà dưỡng nhan</h2>
         <div className="grid grid-2">{posts.filter((p) => p.category === "tra-duong-nhan").slice(0, 2).map((p) => <ArticleCard key={p.slug} post={p} />)}</div>
       </section>
@@ -51,6 +69,25 @@ export default function HomePage() {
         <h2>Top sản phẩm trà được gợi ý</h2>
         <div className="grid grid-2">{products.map((product) => <ProductCard key={product.id} product={product} />)}</div>
       </section>
+
+      <section className="section">
+        <h2>Đánh giá từ người dùng</h2>
+        <div className="grid grid-3">
+          <article className="card quote-card">
+            <p>“Mình chọn theo checklist và thấy dễ duy trì hơn hẳn, không còn mua theo cảm tính.”</p>
+            <strong>Lan, 29 tuổi</strong>
+          </article>
+          <article className="card quote-card">
+            <p>“Phần review có nêu rõ ai phù hợp ai không, nên đỡ tốn tiền thử sai.”</p>
+            <strong>Minh, 33 tuổi</strong>
+          </article>
+          <article className="card quote-card">
+            <p>“Mình thích vì bài viết ngắn gọn, có lộ trình uống theo ngày rất dễ làm theo.”</p>
+            <strong>Thảo, 26 tuổi</strong>
+          </article>
+        </div>
+      </section>
+
       <section className="section">
         <h2>Chuyên mục chính</h2>
         <div className="grid grid-3">{categories.map((cat) => <CategoryCard key={cat.slug} slug={cat.slug} name={cat.name} desc={cat.desc} />)}</div>

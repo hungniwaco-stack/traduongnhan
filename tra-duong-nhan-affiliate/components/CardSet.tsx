@@ -23,7 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
     : 0;
   return (
     <article className="card">
-      <img className="product-image" src={withBasePath(product.image)} alt={product.name} loading="lazy" />
+      <img className="product-image" src={withBasePath(product.image)} alt={product.name} loading="lazy" decoding="async" width={1200} height={1200} />
       <h3>{product.name}</h3>
       <p className="price-row">
         <span className="price-sale">{formatVnd(product.priceSale)}</span>
@@ -59,4 +59,5 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
     </section>
   );
 }
+
 

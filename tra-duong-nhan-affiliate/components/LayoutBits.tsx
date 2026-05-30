@@ -6,7 +6,7 @@ export function Header() {
     <header className="site-header">
       <div className="container nav">
         <Link href="/" className="brand" aria-label="Trà Dưỡng Nhan">
-          <img className="brand-image" src={withBasePath("/images/brand/logo.png")} alt="Logo Trà Dưỡng Nhan" />
+          <img className="brand-image" src={withBasePath("/images/brand/logo.png")} alt="Logo Trà Dưỡng Nhan" width={240} height={74} loading="eager" decoding="async" />
           <span className="brand-label">TRÀ DƯỠNG NHAN</span>
         </Link>
         <nav>
@@ -78,3 +78,4 @@ export function DisclaimerBox() {
     </div>
   );
 }
+

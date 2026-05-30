@@ -139,6 +139,17 @@ export default function BlogPostPage({ params }: Props) {
         {productForPost ? <ProductCard product={productForPost} /> : null}
       </section>
 
+      {productForPost ? (
+        <a
+          className="sticky-mobile-cta"
+          href={productForPost.affiliateUrl}
+          target="_blank"
+          rel="noopener noreferrer sponsored nofollow"
+        >
+          Xem giá sản phẩm trên Shopee
+        </a>
+      ) : null}
+
       <FAQSection faqs={post.faqs} />
 
       {relatedPosts.length > 0 ? (

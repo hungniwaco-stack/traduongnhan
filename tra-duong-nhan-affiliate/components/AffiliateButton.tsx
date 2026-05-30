@@ -1,4 +1,4 @@
-type Props = { href: string; label?: string };
+﻿type Props = { href: string; label?: string };
 
 export default function AffiliateButton({ href, label = "Xem sản phẩm trên Shopee" }: Props) {
   return (
