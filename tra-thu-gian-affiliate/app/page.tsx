@@ -54,6 +54,24 @@ export default function HomePage() {
         <h2>Chuyên mục chính</h2>
         <div className="grid grid-3">{categories.map((cat) => <CategoryCard key={cat.slug} slug={cat.slug} name={cat.name} desc={cat.desc} />)}</div>
       </section>
+
+      <section className="section">
+        <h2>Cụm nội dung theo mục tiêu</h2>
+        <div className="grid grid-3">
+          <article className="card">
+            <h3><Link href="/bai-viet/tra-nao-ho-tro-ngu-ngon-cho-dan-van-phong">Cụm ngủ ngon cho dân văn phòng</Link></h3>
+            <p>Bắt đầu từ bài trụ cột, sau đó đi sang routine tối và review sản phẩm phù hợp.</p>
+          </article>
+          <article className="card">
+            <h3><Link href="/bai-viet/giam-stress-o-van-phong-bang-do-uong-lanh-manh">Cụm giảm stress ban ngày</Link></h3>
+            <p>Tập trung thay đổi đồ uống hằng ngày, kết nối sang trà dễ uống và bài review ứng dụng thực tế.</p>
+          </article>
+          <article className="card">
+            <h3><Link href="/bai-viet/kien-thuc-co-ban-ve-tra-thao-moc">Cụm kiến thức trà cho người mới</Link></h3>
+            <p>Nắm nền tảng chọn trà, rồi đi vào các bài review để chọn đúng sản phẩm theo nhu cầu.</p>
+          </article>
+        </div>
+      </section>
     </>
   );
 }
