@@ -298,7 +298,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-tra-goji-tao-do-hoa-cuc-co-hop-da-xam",
-    title: "Review trà kỷ tử táo đỏ hoa cúc: có hợp da xạm, ngủ muộn?",
+    title: "Trà kỷ tử táo đỏ hoa cúc: có hợp da xạm, ngủ muộn?",
     description: "Đánh giá thực tế trà kỷ tử táo đỏ hoa cúc: hương vị, cách dùng và đối tượng phù hợp.",
     category: "review-tra-duong-nhan",
     productId: "goji-tao-do-hoa-cuc",
@@ -321,7 +321,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-tra-hoa-hong-lai-kho-co-thuc-su-dep-da",
-    title: "Review trà hoa hồng lai khô: có thực sự hỗ trợ đẹp da?",
+    title: "Trà hoa hồng lai khô: có thực sự hỗ trợ đẹp da?",
     description: "Review trà hoa hồng lai khô: cảm nhận hương vị, cách pha và lưu ý cho người mới.",
     category: "review-tra-duong-nhan",
     productId: "hoa-hong-lai-kho",
@@ -344,7 +344,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "review-tra-gao-lut-hoa-hong-co-hop-thanh-loc",
-    title: "Review trà gạo lứt hoa hồng: có hợp thanh lọc và giữ dáng?",
+    title: "Trà gạo lứt hoa hồng: có hợp thanh lọc và giữ dáng?",
     description: "Đánh giá trà gạo lứt hoa hồng cho người muốn thanh lọc nhẹ và giảm đồ uống ngọt.",
     category: "review-tra-duong-nhan",
     productId: "gao-lut-hoa-hong",
@@ -366,6 +366,7 @@ export const posts: BlogPost[] = [
     ]
   }
 ];
+
 
 
 
