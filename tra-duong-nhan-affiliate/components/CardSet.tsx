@@ -21,10 +21,16 @@ export function ProductCard({ product }: { product: Product }) {
   const discountPercent = hasDiscount
     ? Math.round(((product.priceOriginal - product.priceSale) / product.priceOriginal) * 100)
     : 0;
+  const webpSrc = withBasePath(product.image.replace(/\.jpg$/i, ".webp"));
   return (
     <article className="card">
-      <img className="product-image" src={withBasePath(product.image)} alt={product.name} loading="lazy" decoding="async" width={1200} height={1200} />
-      <h3>{product.name}</h3>
+      <Link href={`/san-pham/${product.id}`}>
+        <picture>
+          <source srcSet={webpSrc} type="image/webp" />
+          <img className="product-image" src={withBasePath(product.image)} alt={product.name} loading="lazy" decoding="async" width={1200} height={1200} />
+        </picture>
+      </Link>
+      <h3><Link href={`/san-pham/${product.id}`}>{product.name}</Link></h3>
       <p className="price-row">
         <span className="price-sale">{formatVnd(product.priceSale)}</span>
         {hasDiscount ? <span className="price-original">{formatVnd(product.priceOriginal)}</span> : null}

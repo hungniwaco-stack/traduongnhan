@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { posts } from "@/data/site";
+import { posts, products } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://traduongnhan.shop";
@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8
   }));
 
-  return [...staticEntries, ...postEntries];
+  const productEntries = products.map((product) => ({
+    url: `${base}/san-pham/${product.id}/`,
+    changeFrequency: "weekly" as const,
+    priority: 0.75
+  }));
+
+  return [...staticEntries, ...postEntries, ...productEntries];
 }
 

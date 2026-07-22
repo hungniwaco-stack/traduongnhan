@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Liên hệ | Trà Dưỡng Nhan",
   description: "Thông tin liên hệ và hợp tác nội dung với Trà Dưỡng Nhan.",
-  alternates: { canonical: "/lien-he/" }
-};
+  path: "/lien-he"
+});
 
 export default function ContactPage() {
   return (

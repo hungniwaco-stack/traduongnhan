@@ -2,12 +2,13 @@
 import Link from "next/link";
 import { categories, posts, products } from "@/data/site";
 import { ArticleCard, CategoryCard, ProductCard } from "@/components/CardSet";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Trang chủ | Trà dưỡng nhan",
-  description: "Khám phá trà dưỡng nhan, bài review thực tế và routine chăm sóc sắc đẹp bền vững.",
-  alternates: { canonical: "/" }
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Trà Dưỡng Nhan Chính Hãng — Đẹp Da, Thanh Lọc, Ngủ Ngon",
+  description: "Trà dưỡng nhan chính hãng: review thực tế, routine 21 ngày đẹp da và hướng dẫn chọn trà phù hợp cho người bận rộn.",
+  path: "/"
+});
 
 export default function HomePage() {
   return (

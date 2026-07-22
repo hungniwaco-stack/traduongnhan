@@ -5,6 +5,7 @@ import { categoryLabelMap, posts, products } from "@/data/site";
 import { Breadcrumb, DisclaimerBox, TableOfContents } from "@/components/LayoutBits";
 import { FAQSection, ProductCard } from "@/components/CardSet";
 import JsonLd from "@/components/JsonLd";
+import { buildMetadata } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -15,11 +16,13 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const post = posts.find((item) => item.slug === params.slug);
   if (!post) return { title: "Bài viết không tồn tại" };
-  return {
+  const relatedProduct = post.productId ? products.find((p) => p.id === post.productId) : undefined;
+  return buildMetadata({
     title: `${post.title} | Trà Dưỡng Nhan`,
     description: post.description,
-    alternates: { canonical: `/bai-viet/${post.slug}/` }
-  };
+    path: `/bai-viet/${post.slug}`,
+    image: relatedProduct?.image
+  });
 }
 
 export default function BlogPostPage({ params }: Props) {
@@ -34,7 +37,7 @@ export default function BlogPostPage({ params }: Props) {
         .slice(0, 3)
     : posts.filter((item) => item.category === post.category && item.slug !== post.slug).slice(0, 3);
   const isReview = post.category === "review-tra-duong-nhan";
-  const updatedAt = "30/05/2026";
+  const updatedAt = post.updatedAt ?? "30/05/2026";
   const [day, month, year] = updatedAt.split("/");
   const updatedAtIso = `${year}-${month}-${day}`;
   const url = `https://traduongnhan.shop/bai-viet/${post.slug}/`;

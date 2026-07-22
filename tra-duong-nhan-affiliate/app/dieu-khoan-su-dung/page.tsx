@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Điều khoản sử dụng | Trà Dưỡng Nhan",
   description: "Điều khoản sử dụng nội dung trên website Trà Dưỡng Nhan.",
-  alternates: { canonical: "/dieu-khoan-su-dung/" }
-};
+  path: "/dieu-khoan-su-dung"
+});
 
 export default function TermsPage() {
   return (

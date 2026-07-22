@@ -1,11 +1,12 @@
 ﻿import type { Metadata } from "next";
 import CategoryPage from "@/components/CategoryPage";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Trà dưỡng nhan: cách chọn và lịch uống cho người mới",
   description: "Chuyên mục trà dưỡng nhan cho người mới: gợi ý công thức dễ uống, lịch dùng và lưu ý quan trọng.",
-  alternates: { canonical: "/tra-duong-nhan/" }
-};
+  path: "/tra-duong-nhan"
+});
 
 export default function Page() {
   return (

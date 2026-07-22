@@ -3,6 +3,8 @@ import Script from "next/script";
 import { Noto_Sans, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components/LayoutBits";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata } from "@/lib/seo";
 
 const notoSans = Noto_Sans({
   subsets: ["vietnamese", "latin"],
@@ -18,16 +20,20 @@ const notoSerif = Noto_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://traduongnhan.shop"),
-  title: "Trà dưỡng nhan | Review và routine làm đẹp từ trà",
-  description: "Blog affiliate trà dưỡng nhan: review thực tế, kiến thức thành phần và routine chăm sóc sắc đẹp mỗi ngày.",
-  openGraph: {
-    type: "website",
-    locale: "vi_VN",
-    siteName: "Trà Dưỡng Nhan",
+  ...buildMetadata({
     title: "Trà dưỡng nhan | Review và routine làm đẹp từ trà",
-    description: "Gợi ý trà dưỡng nhan, bài review thực tế và routine làm đẹp nhẹ nhàng mỗi ngày.",
-    url: "https://traduongnhan.shop"
-  }
+    description: "Blog affiliate trà dưỡng nhan: review thực tế, kiến thức thành phần và routine chăm sóc sắc đẹp mỗi ngày.",
+    path: "/"
+  })
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Trà Dưỡng Nhan",
+  url: "https://traduongnhan.shop/",
+  logo: "https://traduongnhan.shop/images/brand/logo.png",
+  description: "Blog affiliate trà dưỡng nhan: review thực tế, kiến thức thành phần và routine chăm sóc sắc đẹp mỗi ngày."
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -36,6 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="vi">
       <body className={`${notoSans.variable} ${notoSerif.variable}`}>
+        <JsonLd data={organizationSchema} />
         {gaId ? (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />

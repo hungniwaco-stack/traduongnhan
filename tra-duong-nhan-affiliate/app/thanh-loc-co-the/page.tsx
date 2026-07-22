@@ -1,11 +1,12 @@
 ﻿import type { Metadata } from "next";
 import CategoryPage from "@/components/CategoryPage";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Thanh lọc cơ thể bằng trà thảo mộc",
   description: "Gợi ý lộ trình thanh lọc nhẹ nhàng bằng trà thảo mộc, phù hợp người mới và dân văn phòng.",
-  alternates: { canonical: "/thanh-loc-co-the/" }
-};
+  path: "/thanh-loc-co-the"
+});
 
 export default function Page() {
   return (

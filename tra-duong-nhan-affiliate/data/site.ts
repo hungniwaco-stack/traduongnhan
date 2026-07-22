@@ -13,6 +13,7 @@ export type BlogPost = {
   notFor?: string[];
   sections: { heading: string; points: string[] }[];
   faqs: FAQ[];
+  updatedAt?: string;
 };
 
 export type Product = {
@@ -87,7 +88,7 @@ export const products: Product[] = [
     shortDesc: "Giá bán: 85.000đ. Dòng trà thảo mộc đa công dụng theo mô tả shop.",
     benefits: ["Hỗ trợ routine làm đẹp", "Dễ dùng mỗi ngày", "Mức giá ổn định"],
     ingredients: "Thành phần theo công bố của nhà bán trên Shopee.",
-    whoFor: "Ngu?i t�m d�ng tr� du?ng nhan k?t h?p thu gi�n nh?.",
+    whoFor: "Người tìm dòng trà dưỡng nhan kết hợp thư giãn nhẹ.",
     howToBrew: "Dùng theo liều lượng và hướng dẫn của shop.",
     experience: "Vị thảo mộc dễ chịu khi pha đúng cách.",
     caution: "Không thay thế tư vấn y tế hoặc chế độ điều trị.",
@@ -146,7 +147,7 @@ export const posts: BlogPost[] = [
     title: "Trà dưỡng nhan cho người mới: nên bắt đầu từ đâu?",
     description: "Hướng dẫn chọn trà dưỡng nhan cho người mới, từ thành phần đến cách uống để dễ duy trì.",
     category: "tra-duong-nhan",
-    relatedSlugs: ["6-cong-thuc-tra-duong-nhan-de-uong-moi-ngay", "uong-tra-duong-nhan-luc-nao-la-tot-nhat", "review-tra-goji-tao-do-hoa-cuc-co-hop-da-xam"],
+    relatedSlugs: ["tra-duong-nhan-la-gi", "cach-pha-tra-duong-nhan-dung-chuan", "6-cong-thuc-tra-duong-nhan-de-uong-moi-ngay", "uong-tra-duong-nhan-luc-nao-la-tot-nhat", "review-tra-goji-tao-do-hoa-cuc-co-hop-da-xam"],
     intro: "Nếu bạn mới tìm hiểu trà dưỡng nhan, điều quan trọng nhất là bắt đầu đơn giản: chọn vị dễ uống, lịch uống cố định và theo dõi cơ thể trong 2-3 tuần.",
     toc: ["Chọn trà dưỡng nhan theo mục tiêu", "Thành phần nên ưu tiên", "Lịch uống cho người mới"],
     quickSummary: ["Bắt đầu từ trà vị dịu, ít thành phần.", "Uống đều 1-2 ly mỗi ngày.", "Theo dõi phản ứng da và giấc ngủ."],
@@ -168,7 +169,7 @@ export const posts: BlogPost[] = [
     title: "6 công thức trà dưỡng nhan dễ uống mỗi ngày",
     description: "Tổng hợp 6 công thức trà dưỡng nhan đơn giản, dễ pha và phù hợp người bận rộn.",
     category: "tra-duong-nhan",
-    relatedSlugs: ["tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "review-tra-goji-tao-do-hoa-cuc-co-hop-da-xam", "routine-uong-tra-duong-nhan-21-ngay-cho-da-sang"],
+    relatedSlugs: ["cach-pha-tra-duong-nhan-dung-chuan", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "review-tra-goji-tao-do-hoa-cuc-co-hop-da-xam", "routine-uong-tra-duong-nhan-21-ngay-cho-da-sang"],
     intro: "Bạn không cần công thức cầu kỳ để bắt đầu uống trà dưỡng nhan. 6 gợi ý dưới đây ưu tiên dễ pha, dễ uống và tiết kiệm thời gian.",
     toc: ["Tiêu chí chọn công thức", "Top 6 công thức", "Mẹo chuẩn bị nhanh"],
     sections: [
@@ -206,7 +207,7 @@ export const posts: BlogPost[] = [
     title: "Kiến thức trà dưỡng nhan: thành phần và lưu ý quan trọng",
     description: "Tổng hợp kiến thức cần biết về thành phần trà dưỡng nhan và các lưu ý an toàn khi dùng.",
     category: "kien-thuc-duong-nhan",
-    relatedSlugs: ["uong-tra-duong-nhan-luc-nao-la-tot-nhat", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "review-tra-hoa-hong-lai-kho-co-thuc-su-dep-da"],
+    relatedSlugs: ["tra-duong-nhan-la-gi", "ai-khong-nen-uong-tra-duong-nhan", "uong-tra-duong-nhan-luc-nao-la-tot-nhat", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "review-tra-hoa-hong-lai-kho-co-thuc-su-dep-da"],
     intro: "Hiểu đúng thành phần giúp bạn chọn trà dưỡng nhan phù hợp hơn với cơ địa và mục tiêu chăm sóc da.",
     toc: ["Nhóm thành phần phổ biến", "Cách đọc nhãn", "Lưu ý an toàn"],
     sections: [
@@ -302,7 +303,7 @@ export const posts: BlogPost[] = [
     description: "Đánh giá thực tế trà kỷ tử táo đỏ hoa cúc: hương vị, cách dùng và đối tượng phù hợp.",
     category: "review-tra-duong-nhan",
     productId: "goji-tao-do-hoa-cuc",
-    relatedSlugs: ["tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "6-cong-thuc-tra-duong-nhan-de-uong-moi-ngay", "uong-tra-duong-nhan-luc-nao-la-tot-nhat"],
+    relatedSlugs: ["so-sanh-cac-loai-tra-duong-nhan", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "6-cong-thuc-tra-duong-nhan-de-uong-moi-ngay", "uong-tra-duong-nhan-luc-nao-la-tot-nhat"],
     intro: "Đây là một trong các combo dưỡng nhan phổ biến vì dễ uống và dễ duy trì. Bài review tập trung trải nghiệm thực tế cho người ngủ muộn và da xạm nhẹ.",
     toc: ["Hương vị thực tế", "Ai nên thử", "Cách dùng gợi ý"],
     quickSummary: ["Vị thanh, ngọt nhẹ.", "Dễ hợp người mới.", "Phù hợp uống sáng hoặc chiều."],
@@ -325,7 +326,7 @@ export const posts: BlogPost[] = [
     description: "Review trà hoa hồng lai khô: cảm nhận hương vị, cách pha và lưu ý cho người mới.",
     category: "review-tra-duong-nhan",
     productId: "hoa-hong-lai-kho",
-    relatedSlugs: ["kien-thuc-tra-duong-nhan-thanh-phan-va-luu-y", "routine-uong-tra-duong-nhan-21-ngay-cho-da-sang", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau"],
+    relatedSlugs: ["so-sanh-cac-loai-tra-duong-nhan", "kien-thuc-tra-duong-nhan-thanh-phan-va-luu-y", "routine-uong-tra-duong-nhan-21-ngay-cho-da-sang", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau"],
     intro: "Trà hoa hồng lai khô được nhiều người chọn vì mùi hương dễ chịu và cảm giác thư giãn. Nhưng có hợp bạn không còn tùy khẩu vị và lịch sinh hoạt.",
     toc: ["Điểm mạnh", "Điểm cần cân nhắc", "Cách uống thực tế"],
     quickSummary: ["Hương hoa rõ.", "Hợp routine tối.", "Nên pha nhạt nếu mới bắt đầu."],
@@ -348,7 +349,7 @@ export const posts: BlogPost[] = [
     description: "Đánh giá trà gạo lứt hoa hồng cho người muốn thanh lọc nhẹ và giảm đồ uống ngọt.",
     category: "review-tra-duong-nhan",
     productId: "gao-lut-hoa-hong",
-    relatedSlugs: ["thanh-loc-co-the-bang-tra-thao-moc-7-ngay", "thuc-don-nhe-khi-dung-tra-duong-nhan", "6-cong-thuc-tra-duong-nhan-de-uong-moi-ngay"],
+    relatedSlugs: ["so-sanh-cac-loai-tra-duong-nhan", "thanh-loc-co-the-bang-tra-thao-moc-7-ngay", "thuc-don-nhe-khi-dung-tra-duong-nhan", "6-cong-thuc-tra-duong-nhan-de-uong-moi-ngay"],
     intro: "Nếu bạn muốn một loại trà dễ uống ban ngày và có vị bùi nhẹ, trà gạo lứt hoa hồng là lựa chọn đáng cân nhắc.",
     toc: ["Cảm nhận vị trà", "Đối tượng phù hợp", "Checklist trước khi mua"],
     quickSummary: ["Vị bùi nhẹ, dễ uống.", "Hợp thay đồ uống ngọt.", "Pha nhanh, tiện mang đi làm."],
@@ -364,6 +365,91 @@ export const posts: BlogPost[] = [
       { question: "Pha bình lớn trong ngày được không?", answer: "Được, nên dùng trong ngày để giữ hương vị ổn định." },
       { question: "Loại này có đắng không?", answer: "Thường không đắng rõ, thiên vị bùi nhẹ." }
     ]
+  },
+  {
+    slug: "tra-duong-nhan-la-gi",
+    title: "Trà dưỡng nhan là gì? Thành phần và công dụng thường gặp",
+    description: "Giải thích trà dưỡng nhan là gì, thường gồm thành phần nào và các công dụng phổ biến được người dùng chia sẻ.",
+    category: "kien-thuc-duong-nhan",
+    relatedSlugs: ["kien-thuc-tra-duong-nhan-thanh-phan-va-luu-y", "ai-khong-nen-uong-tra-duong-nhan", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau"],
+    intro: "Trà dưỡng nhan là tên gọi chung cho các loại trà thảo mộc phối trộn từ nhiều nguyên liệu tự nhiên như kỷ tử, táo đỏ, hoa cúc, hoa hồng. Bài viết tổng hợp thông tin cơ bản để bạn hiểu rõ trước khi bắt đầu dùng.",
+    toc: ["Trà dưỡng nhan là gì", "Thành phần thường gặp", "Công dụng được nhiều người chia sẻ"],
+    quickSummary: ["Là trà thảo mộc phối trộn nhiều nguyên liệu tự nhiên.", "Thường dùng trong routine chăm sóc sắc đẹp tại nhà.", "Không phải thuốc, không thay thế điều trị y tế."],
+    sections: [
+      { heading: "Trà dưỡng nhan là gì?", points: ["Là trà thảo mộc phối trộn nhiều nguyên liệu tự nhiên", "Phổ biến trong routine chăm sóc sắc đẹp tại nhà", "Không phải thuốc, không thay thế điều trị y tế"] },
+      { heading: "Thành phần thường gặp", points: ["Kỷ tử, táo đỏ, hoa cúc", "Hoa hồng, cam thảo", "Một số set có thêm đẳng sâm, hoài sơn tùy thương hiệu"] },
+      { heading: "Công dụng được nhiều người chia sẻ", points: ["Hỗ trợ thư giãn, dễ ngủ hơn", "Hỗ trợ routine làm đẹp da khi dùng đều", "Là lựa chọn thay thế đồ uống nhiều đường"] }
+    ],
+    faqs: [
+      { question: "Trà dưỡng nhan có phải là thuốc không?", answer: "Không, đây là trà thảo mộc hỗ trợ routine hằng ngày, không thay thế thuốc hoặc điều trị y tế." },
+      { question: "Uống trà dưỡng nhan có tác dụng ngay không?", answer: "Thường cần duy trì đều một thời gian mới cảm nhận rõ, hiệu quả có thể khác nhau tùy cơ địa." },
+      { question: "Trà dưỡng nhan có chứa caffeine không?", answer: "Đa phần các set thảo mộc phổ biến không có caffeine, nhưng nên kiểm tra thành phần cụ thể trên bao bì." }
+    ],
+    updatedAt: "22/07/2026"
+  },
+  {
+    slug: "ai-khong-nen-uong-tra-duong-nhan",
+    title: "Ai không nên uống trà dưỡng nhan? Lưu ý quan trọng cần biết",
+    description: "Những nhóm người nên thận trọng hoặc hỏi ý kiến chuyên môn trước khi dùng trà dưỡng nhan đều đặn.",
+    category: "kien-thuc-duong-nhan",
+    relatedSlugs: ["tra-duong-nhan-la-gi", "kien-thuc-tra-duong-nhan-thanh-phan-va-luu-y", "cach-pha-tra-duong-nhan-dung-chuan"],
+    intro: "Trà dưỡng nhan lành tính với đa số người dùng, nhưng một số nhóm nên thận trọng hoặc hỏi ý kiến chuyên môn trước khi dùng đều đặn.",
+    toc: ["Nhóm nên thận trọng", "Dấu hiệu nên ngừng uống", "Lưu ý khi mới bắt đầu"],
+    bestFor: ["Người khỏe mạnh muốn thêm routine thư giãn nhẹ.", "Người muốn thay thế bớt đồ uống nhiều đường."],
+    notFor: ["Phụ nữ mang thai hoặc cho con bú chưa hỏi ý kiến bác sĩ.", "Người có bệnh nền đang điều trị dài hạn."],
+    sections: [
+      { heading: "Nhóm nên thận trọng", points: ["Phụ nữ mang thai hoặc đang cho con bú", "Người có bệnh nền hoặc đang dùng thuốc điều trị dài hạn", "Người có tiền sử dị ứng phấn hoa hoặc hoa cúc"] },
+      { heading: "Dấu hiệu nên ngừng uống", points: ["Nổi mẩn, ngứa da bất thường", "Đau bụng hoặc rối loạn tiêu hóa kéo dài", "Cảm giác khó chịu rõ rệt sau khi uống"] },
+      { heading: "Lưu ý khi mới bắt đầu", points: ["Thử lượng nhỏ trước khi dùng đều đặn", "Không dùng thay nước lọc hoặc thuốc điều trị", "Hỏi ý kiến bác sĩ nếu đang điều trị bệnh nền"] }
+    ],
+    faqs: [
+      { question: "Phụ nữ mang thai uống trà dưỡng nhan được không?", answer: "Nên hỏi ý kiến bác sĩ trước khi dùng, vì mỗi cơ địa và giai đoạn thai kỳ khác nhau." },
+      { question: "Trẻ em có uống được không?", answer: "Không khuyến khích cho trẻ nhỏ dùng nếu chưa có tư vấn chuyên môn." },
+      { question: "Đang uống thuốc điều trị có nên dùng thêm trà dưỡng nhan không?", answer: "Nên hỏi ý kiến bác sĩ trước, vì thảo mộc có thể ảnh hưởng đến một số loại thuốc." }
+    ],
+    updatedAt: "22/07/2026"
+  },
+  {
+    slug: "cach-pha-tra-duong-nhan-dung-chuan",
+    title: "Cách pha trà dưỡng nhan đúng chuẩn để giữ trọn hương vị",
+    description: "Hướng dẫn cách pha trà dưỡng nhan cơ bản, nhiệt độ nước và thời gian hãm hợp lý để trà ngon và dễ uống hơn.",
+    category: "tra-duong-nhan",
+    relatedSlugs: ["6-cong-thuc-tra-duong-nhan-de-uong-moi-ngay", "tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "ai-khong-nen-uong-tra-duong-nhan"],
+    intro: "Pha đúng cách giúp trà dưỡng nhan giữ được hương vị và hạn chế vị chát gắt. Dưới đây là các bước cơ bản, dễ áp dụng tại nhà.",
+    toc: ["Chuẩn bị trước khi pha", "Các bước pha cơ bản", "Sai lầm thường gặp"],
+    quickSummary: ["Dùng nước sôi để nguội bớt trước khi pha.", "Hãm khoảng 3-5 phút tùy khẩu vị.", "Tránh vắt túi trà để không bị chát gắt."],
+    sections: [
+      { heading: "Chuẩn bị trước khi pha", points: ["Dùng nước sôi để nguội bớt khoảng 1-2 phút trước khi pha", "Ưu tiên ấm thủy tinh hoặc gốm để giữ hương", "Vệ sinh dụng cụ pha sạch sẽ trước khi dùng"] },
+      { heading: "Các bước pha cơ bản", points: ["Cho trà vào ấm, rót nước nóng vừa đủ", "Hãm khoảng 3-5 phút tùy khẩu vị", "Có thể hãm lại lần 2 với thời gian ngắn hơn"] },
+      { heading: "Sai lầm thường gặp", points: ["Dùng nước quá sôi khiến trà dễ chát", "Hãm quá lâu làm mất vị ngọt hậu tự nhiên", "Vắt túi trà mạnh tay gây vị gắt"] }
+    ],
+    faqs: [
+      { question: "Nên pha trà dưỡng nhan bằng nước sôi 100 độ không?", answer: "Nên để nước nguội bớt một chút trước khi pha để tránh vị chát gắt." },
+      { question: "Hãm trà bao lâu là hợp lý?", answer: "Thường khoảng 3-5 phút, có thể điều chỉnh theo khẩu vị cá nhân." },
+      { question: "Có thể pha lạnh (cold brew) không?", answer: "Có thể, nhiều người thích vị thanh mát hơn khi pha lạnh và ủ trong tủ lạnh vài giờ." }
+    ],
+    updatedAt: "22/07/2026"
+  },
+  {
+    slug: "so-sanh-cac-loai-tra-duong-nhan",
+    title: "So sánh các loại trà dưỡng nhan phổ biến: nên chọn loại nào?",
+    description: "So sánh nhanh các loại trà dưỡng nhan đang được nhiều người lựa chọn để bạn dễ chọn sản phẩm phù hợp nhu cầu.",
+    category: "review-tra-duong-nhan",
+    relatedSlugs: ["tra-duong-nhan-cho-nguoi-moi-nen-bat-dau-tu-dau", "review-tra-goji-tao-do-hoa-cuc-co-hop-da-xam", "kien-thuc-tra-duong-nhan-thanh-phan-va-luu-y"],
+    intro: "Thị trường trà dưỡng nhan hiện có nhiều lựa chọn với mức giá và công thức khác nhau. Bài viết so sánh nhanh theo tiêu chí thực tế để bạn dễ chọn sản phẩm phù hợp.",
+    toc: ["Tiêu chí nên so sánh", "Gợi ý theo nhu cầu", "Lưu ý khi chọn mua"],
+    quickSummary: ["So sánh theo thành phần, cách đóng gói và mức giá.", "Người mới nên bắt đầu với set nhỏ, dễ nấu.", "Luôn kiểm tra thành phần trước khi đặt mua."],
+    sections: [
+      { heading: "Tiêu chí nên so sánh", points: ["Thành phần và số lượng nguyên liệu trong set", "Dạng đóng gói: túi lọc tiện lợi hay nguyên liệu nấu truyền thống", "Mức giá theo dung lượng sử dụng"] },
+      { heading: "Gợi ý theo nhu cầu", points: ["Người mới nên chọn set nhỏ, dễ nấu để dùng thử trước", "Người bận rộn ưu tiên dạng túi hoặc gói tiện lợi", "Người dùng lâu dài có thể cân nhắc combo dung lượng lớn để tiết kiệm"] },
+      { heading: "Lưu ý khi chọn mua", points: ["Xem kỹ thành phần công bố của nhà bán trước khi đặt", "Bắt đầu với gói nhỏ nếu chưa chắc có hợp cơ địa", "Ưu tiên shop có đánh giá thực tế rõ ràng"] }
+    ],
+    faqs: [
+      { question: "Nên mua set lớn hay set nhỏ trước?", answer: "Nếu chưa dùng thử, nên chọn set nhỏ trước để kiểm tra độ phù hợp trước khi mua combo lớn." },
+      { question: "Dạng túi lọc và dạng nguyên liệu nấu khác nhau thế nào?", answer: "Túi lọc tiện mang theo và pha nhanh, còn dạng nguyên liệu nấu thường cần thời gian chuẩn bị hơn nhưng có thể đậm vị hơn." },
+      { question: "Giá rẻ hơn có đồng nghĩa chất lượng kém hơn không?", answer: "Không hẳn, nên xem thành phần và đánh giá thực tế thay vì chỉ so sánh giá." }
+    ],
+    updatedAt: "22/07/2026"
   }
 ];
 

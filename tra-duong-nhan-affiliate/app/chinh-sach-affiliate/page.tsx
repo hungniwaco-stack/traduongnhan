@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Chính sách affiliate | Trà Dưỡng Nhan",
   description: "Chính sách minh bạch affiliate của Trà Dưỡng Nhan và cam kết biên tập trung thực.",
-  alternates: { canonical: "/chinh-sach-affiliate/" }
-};
+  path: "/chinh-sach-affiliate"
+});
 
 export default function AffiliatePolicyPage() {
   return (

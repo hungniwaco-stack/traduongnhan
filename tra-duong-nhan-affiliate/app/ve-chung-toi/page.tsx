@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Về chúng tôi | Trà Dưỡng Nhan",
   description: "Giới thiệu dự án Trà Dưỡng Nhan, tiêu chí biên tập và nguyên tắc minh bạch nội dung.",
-  alternates: { canonical: "/ve-chung-toi/" }
-};
+  path: "/ve-chung-toi"
+});
 
 export default function AboutPage() {
   return (
