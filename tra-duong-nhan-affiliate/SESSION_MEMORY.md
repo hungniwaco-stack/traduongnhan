@@ -1,74 +1,83 @@
-# Session Memory - Tra Duong Nhan Affiliate
+﻿# Session Memory - Tra Duong Nhan Affiliate
 
-Last updated: 2026-05-30
+Last updated: 2026-07-22
 
 ## Canonical Working Location (DO NOT ASK AGAIN)
-- Standalone root: `D:\Hungniwaco\Claude Code\tra-duong-nhan-website`
-- App root: `D:\Hungniwaco\Claude Code\tra-duong-nhan-website\tra-duong-nhan-affiliate`
-- Always edit inside the app root above.
+- Standalone root (current, confirmed 2026-07-22): `D:\Hungniwaco\CODEX\Tra-duong-nhan`
+- App root: `D:\Hungniwaco\CODEX\Tra-duong-nhan\tra-duong-nhan-affiliate`
+- Always edit inside app root unless explicitly requested.
+- Note: an older note in this file pointed to `D:\Hungniwaco\Claude Code\tra-duong-nhan-website\...` — folder was moved/renamed at some point before 2026-07-22. Git remote is unchanged (`hungniwaco-stack/traduongnhan`), so if in doubt, verify by `git remote -v` rather than trusting either path blindly.
+- Related but separate folder with SEO audit source material: `D:\Dropbox\01. DỰ ÁN 2026\INDEX\traduongnhan.shop` (cloud-synced via Dropbox, contains `ACTION-PLAN.md`, `FULL-AUDIT-REPORT.md`, `findings/`, `cluster/cluster-briefs/`). The audit there (dated 2026-07-20) was done via SERP analysis, not a direct crawl — many of its "critical" findings were already fixed in code before the audit ran. Don't trust its findings without checking actual code/live site first. The `cluster/cluster-briefs/*.md` files are SEO outlines with fabricated-sounding scientific citations/stats/prices — reuse only their topic and target keywords, never copy specific claims verbatim (see Content Quality Rules below).
 
-## Project State (Locked)
-- This project is cloned from the tea template and converted to `Trà Dưỡng Nhan`.
-- Folder renamed from `tra-thu-gian-affiliate` to `tra-duong-nhan-affiliate`.
-- Build status: `npm run build` passes after taxonomy migration.
+## Domain & Deployment (LOCKED)
+- Production domain: `https://traduongnhan.shop`
+- GitHub Pages repo: `https://github.com/hungniwaco-stack/traduongnhan`
+- GitHub Pages custom domain is connected and HTTPS is enforced.
+- DNS target (Hostinger) uses GitHub Pages standard A records and `www` CNAME.
 
-## Branding (Current)
-- Brand name: `TRÀ DƯỠNG NHAN`.
-- Header text and alt labels use `Trà Dưỡng Nhan`.
-- Logo path remains: `public/images/brand/logo.png` (placeholder until user provides new logo).
+## Technical Routing Rules (LOCKED)
+- For custom domain deployment, DO NOT use repository `basePath` (`/traduongnhan`).
+- `next.config.mjs` should remain export-only without `basePath` and `assetPrefix` for current custom domain setup.
+- Keep helper `lib/withBasePath.ts` with empty base path for current domain setup.
 
-## Domain / SEO Base (Working Assumption)
-- Working metadata base and schema domain currently set to: `https://traduongnhan.shop`.
-- `robots.ts` and `sitemap.ts` use `traduongnhan.shop`.
-- No `CNAME` file in cloned project (removed to avoid inheriting old domain by mistake).
+## Branding & UI (CURRENT)
+- Brand: `TRÀ DƯỠNG NHAN`
+- Header logo source: `public/images/brand/logo.png`
+- Logo has been replaced by user-provided file and enlarged for stronger recognition.
+- Primary theme direction: herbal, warm, premium; improved CTA contrast already applied.
 
-## Taxonomy (Locked)
-- Categories:
-  - `tra-duong-nhan`
-  - `review-tra-duong-nhan`
-  - `routine-dep-da`
-  - `thanh-loc-co-the`
-  - `kien-thuc-duong-nhan`
-- Old category routes removed from this project:
-  - `/tra-ngu-ngon`
-  - `/giam-stress`
-  - `/review-tra`
-  - `/healthy-lifestyle`
-  - `/kien-thuc-tra`
+## Product/Content Rules (LOCKED)
+- Product images use: `/images/products/01.jpg` to `/images/products/06.jpg` in order.
+- Card image crop should prioritize top content: `object-position: top center`.
+- If `priceSale === priceOriginal`, show only one sale price (hide original strikethrough and discount badge).
+- Short descriptions must NOT include phrase like `(giá gốc ...)`.
+- Product review titles must NOT start with `Review` prefix.
 
-## Content Dataset (Locked)
-- `data/site.ts` replaced with real `Trà Dưỡng Nhan` sample dataset:
-  - New product IDs/slugs/titles/descriptions.
-  - New post slugs and interlink map (`relatedSlugs`) aligned to new taxonomy.
-  - Review template fields include `quickSummary`, `bestFor`, `notFor`, FAQ blocks.
+## Affiliate Links (CURRENT)
+- 4kg combo product affiliate link is locked to:
+  - `https://s.shopee.vn/4qCseh5TIq`
 
-## Category Routes Added
-- `/tra-duong-nhan`
-- `/review-tra-duong-nhan`
-- `/routine-dep-da`
-- `/thanh-loc-co-the`
-- `/kien-thuc-duong-nhan`
+## Content Quality Rules (LOCKED)
+- Vietnamese diacritics must be correct everywhere (no mojibake like `TrÃ`, `Ä`, `á»`). Found and fixed one real instance in `data/site.ts` (product `gao-lut-hoa-hong`, `whoFor` field) on 2026-07-22 — worth a full-file grep (`[a-zA-Z]\?[a-zA-Z]|�`) after any bulk data edit.
+- Keep schema strategy: `Article`, `FAQPage`, `BreadcrumbList`, plus `Organization` (site-wide, in `app/layout.tsx`) and `Product` (per product page) — both added 2026-07-22.
+- `Product` schema is now added on `app/san-pham/[slug]/page.tsx` using only real available fields (name, image, description, brand, offers: price/currency/availability). Do NOT add `aggregateRating` or `review` fields — no real customer rating data exists; fabricating counts/scores would violate the no-fake-claims rule below.
+- **No fabricated claims rule**: site voice uses only hedged language ("hỗ trợ", "có thể", "thường được dùng"). Never add specific scientific citations, study statistics, drug-interaction details, or specific review counts/ratings unless verifiably real. This applies especially when adapting the Dropbox `cluster-briefs/` content outlines into actual posts — write in the site's existing cautious style instead of copying their invented citations/numbers.
+- Never invent fictional product names/prices/SKUs in content — always tie articles/comparisons to the 6 real products in `data/site.ts`.
 
-## Technical Rules (Locked)
-- Keep schema strategy: `Article`, `FAQPage`, `BreadcrumbList`.
-- Do not add `Product` schema unless merchant-required fields are fully available.
-- Date display for article UI: `dd/mm/yyyy`.
-- Dynamic article canonical comes from `generateMetadata` in `app/bai-viet/[slug]/page.tsx`.
+## Conversion/UX Upgrades Already Applied
+- Added trust blocks and social-proof section on homepage.
+- Added sticky mobile CTA on article pages.
+- Added internal linking clusters in category pages.
+- Added image/logo width-height and decoding hints to reduce layout shift.
 
-## Canonical Rules (Locked)
-- Do not set global `alternates.canonical: "/"` in `app/layout.tsx`.
-- Canonical must be set per top-level page explicitly.
-- Ensure category canonical paths match new taxonomy routes.
+## Site Architecture Facts (CURRENT, added 2026-07-22)
+- Stack: Next.js 14 App Router, static export (`output: "export"` in `next.config.mjs`), deployed via `.github/workflows/deploy-pages.yml` to GitHub Pages on push to `main`.
+- `data/site.ts` is the single source of truth: `products` array (6 items) and `posts` array (15 items as of 2026-07-22, up from 11).
+- `lib/seo.ts` exports `buildMetadata({title, description, path, image?})` — use this for ALL page `metadata`/`generateMetadata` instead of writing raw `Metadata` objects. Reason: Next.js does not merge nested `openGraph`/`twitter` objects from the root layout into child pages that omit them, so every page must produce its own complete OG/Twitter block or it silently inherits the homepage's.
+- Product detail pages: `app/san-pham/[slug]/page.tsx` (slug = `product.id`), added 2026-07-22, linked from `ProductCard`, included in `app/sitemap.ts`.
+- JSON-LD locations: `Organization` in `app/layout.tsx` (site-wide); `Article`+`BreadcrumbList`+`FAQPage` in `app/bai-viet/[slug]/page.tsx`; `Product`+`BreadcrumbList` in `app/san-pham/[slug]/page.tsx`.
+- `BlogPost` type has optional `updatedAt?: string` field (added 2026-07-22). The 11 original posts have no real known publish date and still fall back to hardcoded `"30/05/2026"` in the article template — don't fabricate individual dates for them; only set `updatedAt` going forward for genuinely new/edited posts.
+- GA4 Measurement ID: `G-7SE02FHN49` (confirmed live and firing 2026-07-22). Because the site is a static export, `NEXT_PUBLIC_GA_ID` must be set as a GitHub Actions repo secret **and** referenced in the workflow's build step (`env: NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}`) — setting only the secret without the workflow `env:` line does nothing, since Next.js inlines `NEXT_PUBLIC_*` vars at build time.
+- Product images: `.jpg` is canonical in `data/site.ts`, `.webp` siblings exist for all 6 and are now actually served via `<picture><source type="image/webp">` in `CardSet.tsx` / `san-pham/[slug]/page.tsx` (previously the `.webp` files existed on disk but nothing referenced them).
+- GSC: property verified for `traduongnhan.shop`; sitemap resubmitted as `/sitemap.xml` on 2026-07-22, 31 URLs discovered successfully (10 static + 6 products + 15 posts).
 
-## Verification Playbook
-- After edits, run `npm run build` in:
-  - `D:\Hungniwaco\Claude Code\tra-duong-nhan-website\tra-duong-nhan-affiliate`
-- For deploy verification (when connected to a real domain):
-  1) Check one category page canonical.
-  2) Check one article page date + schema.
-  3) Check `sitemap.xml` has only new taxonomy routes.
+## Sandbox/Tooling Gotchas (for Claude, not user-facing)
+- `npm run build` hangs indefinitely in the Cowork sandbox because `next/font/google` tries to fetch `fonts.googleapis.com`, which is blocked by the sandbox's network allowlist. Use `node_modules/.bin/tsc --noEmit` (strict mode already on in `tsconfig.json`) to verify changes instead; the real build only needs to succeed on GitHub Actions (which has full network access).
+- Direct `curl`/HTTP from bash to `traduongnhan.shop` is also blocked by the sandbox allowlist — use `mcp__workspace__web_fetch` or Claude-in-Chrome tools to check the live site instead.
+- This repo's working copy sits on a mount with unusual git-lock permission behavior: `rm` on `.git/index.lock`, fresh loose objects, or `HEAD.lock` fails with "Operation not permitted", but `mv` on the same file succeeds. Workaround before any `git add`/`commit`/`status` that reports a stale lock: `mv .git/index.lock .git/index.lock.bak<N>` then retry immediately.
+- `git config user.name`/`user.email` are not persisted in the sandbox — set them each session before committing (`Nguyễn Hữu Hùng` / `hungniwaco@gmail.com`, matching existing commit history).
+- No GitHub push credentials exist in the sandbox — commit locally, then tell the user to `git push origin main` from their own machine.
+- The working tree has large pre-existing CRLF line-ending drift across ~140 files unrelated to the website (the `agents/`, `commands/`, `skills/`, `workflows/` AI Agent Business Kit files at the repo root) — this shows as "modified" in `git status` but isn't a real change. Never `git add -A`/`git add .`; always stage explicit paths to avoid committing unrelated noise.
 
-## User Preferences (Locked)
-- Execute directly with minimal back-and-forth.
-- Keep replies concise.
-- Vietnamese content with proper diacritics.
+## Outstanding Items (as of 2026-07-22, don't re-derive — just pick up)
+- Need from user: real author name/bio (currently generic "Ban biên tập Trà Dưỡng Nhan"), ATTP certification/business license info if any, real social media URLs (for `Organization` schema `sameAs`).
+- User should run PageSpeed Insights to verify/refute the old audit's "server in Brazil" claim — not yet checked.
+- More articles can be drafted from `cluster-plan.md` in the Dropbox audit folder beyond the 4 already published (`tra-duong-nhan-la-gi`, `ai-khong-nen-uong-tra-duong-nhan`, `cach-pha-tra-duong-nhan-dung-chuan`, `so-sanh-cac-loai-tra-duong-nhan`); a 5th brief (`C2-S4-uong-luc-nao-tot-nhat`) was intentionally skipped as a near-duplicate of the existing `uong-tra-duong-nhan-luc-nao-la-tot-nhat` post.
+- Optional/nice-to-have, not urgent: per-category OG images (currently all pages share one default `public/images/og-default.jpg`), a dedicated pillar/"cẩm nang toàn diện" page (referenced conceptually by new articles but not built).
+
+## User Preferences (LOCKED)
+- User wants direct execution without repeated confirmation.
+- Default behavior: do all requested tasks end-to-end, then report results.
+- Communication language: Vietnamese.
+- Keep responses concise and practical.
+- Comfortable following detailed manual step-by-step instructions for things Claude can't do itself (GitHub secrets, Google Search Console, GA4 dashboard) — give exact click-paths rather than vague pointers.
