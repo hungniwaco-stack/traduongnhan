@@ -75,9 +75,16 @@ Last updated: 2026-07-22
 - **ATTP certification / business license: deliberately excluded, permanently.** User confirmed this is a pure affiliate site (doesn't manufacture or sell directly), so ATTP food-safety certification doesn't apply and must never be added or implied. Don't re-suggest this.
 - Real social media URLs (for `Organization` schema `sameAs`) still not provided — still outstanding if the user has any.
 
+## Performance Findings (2026-07-22, resolved)
+- User ran PageSpeed Insights mobile: score 61, LCP 12.2s (very poor), FCP 4.3s, Speed Index 6.1s — but TBT only 30ms and CLS 0, so the bottleneck was NOT server/JS-execution (i.e. the old audit's "server in Brazil" theory looks wrong/irrelevant) — it was unoptimized images.
+- Root cause found: `public/images/brand/logo.png` was 1254×1254 / 1.12MB but displayed at only ~76px (`loading="eager"` in header — almost certainly the LCP element); product photos were 1024×1024 sourced at 700KB-1MB each despite rendering in ~220px-tall cards.
+- Fixed: resized logo to 300×300 (92KB), product images to 800×800 max + recompressed jpg/webp at quality 78 (each now 35-153KB, down from 150KB-1MB), favicon icons recompressed. Total weight of these assets dropped from ~4.7MB to ~1.2MB. Also fixed one WCAG contrast failure found in the same audit run: `.breadcrumb` text color `#69756a` was 4.34:1 on the cream background (fails AA's 4.5:1) — changed to `#4d5d4f` (6.3:1).
+- User has not re-run PageSpeed after this fix yet — if asked to verify, have them re-run `pagespeed.web.dev` on mobile and expect a large jump in the Hiệu suất/Performance score and LCP metric.
+- Still not fully addressed: "Sử dụng bộ nhớ đệm hiệu quả" (efficient cache lifetimes, ~1.9MB flagged) — GitHub Pages sets its own default `Cache-Control` headers on `public/` assets and there's no way to override them without fronting the site with a CDN like Cloudflare (this was the old audit's original suggestion, for a different stated reason). Don't re-diagnose this from scratch — it's a known GitHub Pages limitation, not a code bug.
+
 ## Outstanding Items (as of 2026-07-22, don't re-derive — just pick up)
 - Real social media URLs (Facebook/TikTok/Zalo...) if the user has any, for `Organization` schema `sameAs`.
-- User should run PageSpeed Insights to verify/refute the old audit's "server in Brazil" claim — not yet checked.
+- Consider Cloudflare (or similar) in front of GitHub Pages if the user wants to fix the "cache lifetime" PageSpeed diagnostic — GitHub Pages itself can't set custom cache headers.
 - More articles can be drafted from `cluster-plan.md` in the Dropbox audit folder beyond the 4 already published (`tra-duong-nhan-la-gi`, `ai-khong-nen-uong-tra-duong-nhan`, `cach-pha-tra-duong-nhan-dung-chuan`, `so-sanh-cac-loai-tra-duong-nhan`); a 5th brief (`C2-S4-uong-luc-nao-tot-nhat`) was intentionally skipped as a near-duplicate of the existing `uong-tra-duong-nhan-luc-nao-la-tot-nhat` post.
 - Optional/nice-to-have, not urgent: per-category OG images (currently all pages share one default `public/images/og-default.jpg`), a dedicated pillar/"cẩm nang toàn diện" page (referenced conceptually by new articles but not built).
 - As of 2026-07-22 the local commit that updates this file (and the author-name commit that follows it) may be ahead of `origin/main` — check `git fetch origin main && git log origin/main -1` before assuming the remote is current; push credentials aren't available in the sandbox so the user must `git push origin main` themselves.
