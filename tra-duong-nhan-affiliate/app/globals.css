@@ -174,7 +174,7 @@ li {
 .article h2 { margin-top: 1.25rem; }
 .article h3 { margin-top: .8rem; }
 .article p, .article li { line-height: 1.74; }
-.breadcrumb { font-size: .9rem; color: #69756a; margin: .8rem 0; }
+.breadcrumb { font-size: .9rem; color: #4d5d4f; margin: .8rem 0; }
 .toc { border: 1px dashed var(--primary); background: #f5f9f4; padding: .9rem; border-radius: 12px; }
 .faq-item { border-bottom: 1px solid var(--line); padding: .6rem 0; }
 .faq-item summary { cursor: pointer; font-weight: 600; }
