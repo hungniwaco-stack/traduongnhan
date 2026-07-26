@@ -69,11 +69,18 @@ Last updated: 2026-07-22
 - No GitHub push credentials exist in the sandbox — commit locally, then tell the user to `git push origin main` from their own machine.
 - The working tree has large pre-existing CRLF line-ending drift across ~140 files unrelated to the website (the `agents/`, `commands/`, `skills/`, `workflows/` AI Agent Business Kit files at the repo root) — this shows as "modified" in `git status` but isn't a real change. Never `git add -A`/`git add .`; always stage explicit paths to avoid committing unrelated noise.
 
+## Author & Business Identity (LOCKED, decided 2026-07-22)
+- Real author name is **Nguyễn Hữu Hùng** — used as-is, with NO title/role/credential attached (user explicitly chose the "name only, no chức danh" option). Do not add job titles like "chuyên gia" or "biên tập viên" unless the user asks for one later.
+- Applied in: article byline (`app/bai-viet/[slug]/page.tsx`, replaces old generic "Ban biên tập Trà Dưỡng Nhan"), `Article` JSON-LD `author` field (now `{"@type": "Person", "name": "Nguyễn Hữu Hùng"}`, publisher stays `Organization` "Trà Dưỡng Nhan"), and one mention on `app/ve-chung-toi/page.tsx`.
+- **ATTP certification / business license: deliberately excluded, permanently.** User confirmed this is a pure affiliate site (doesn't manufacture or sell directly), so ATTP food-safety certification doesn't apply and must never be added or implied. Don't re-suggest this.
+- Real social media URLs (for `Organization` schema `sameAs`) still not provided — still outstanding if the user has any.
+
 ## Outstanding Items (as of 2026-07-22, don't re-derive — just pick up)
-- Need from user: real author name/bio (currently generic "Ban biên tập Trà Dưỡng Nhan"), ATTP certification/business license info if any, real social media URLs (for `Organization` schema `sameAs`).
+- Real social media URLs (Facebook/TikTok/Zalo...) if the user has any, for `Organization` schema `sameAs`.
 - User should run PageSpeed Insights to verify/refute the old audit's "server in Brazil" claim — not yet checked.
 - More articles can be drafted from `cluster-plan.md` in the Dropbox audit folder beyond the 4 already published (`tra-duong-nhan-la-gi`, `ai-khong-nen-uong-tra-duong-nhan`, `cach-pha-tra-duong-nhan-dung-chuan`, `so-sanh-cac-loai-tra-duong-nhan`); a 5th brief (`C2-S4-uong-luc-nao-tot-nhat`) was intentionally skipped as a near-duplicate of the existing `uong-tra-duong-nhan-luc-nao-la-tot-nhat` post.
 - Optional/nice-to-have, not urgent: per-category OG images (currently all pages share one default `public/images/og-default.jpg`), a dedicated pillar/"cẩm nang toàn diện" page (referenced conceptually by new articles but not built).
+- As of 2026-07-22 the local commit that updates this file (and the author-name commit that follows it) may be ahead of `origin/main` — check `git fetch origin main && git log origin/main -1` before assuming the remote is current; push credentials aren't available in the sandbox so the user must `git push origin main` themselves.
 
 ## User Preferences (LOCKED)
 - User wants direct execution without repeated confirmation.

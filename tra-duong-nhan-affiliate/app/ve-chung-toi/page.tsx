@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <section className="article">
       <h1>Về chúng tôi</h1>
-      <p>Trà Dưỡng Nhan là blog chia sẻ trải nghiệm trà thảo mộc và routine làm đẹp bền vững cho người bận rộn.</p>
+      <p>Trà Dưỡng Nhan là blog chia sẻ trải nghiệm trà thảo mộc và routine làm đẹp bền vững cho người bận rộn, được thành lập và biên tập bởi Nguyễn Hữu Hùng.</p>
 
       <h2>Tiêu chí biên tập</h2>
       <ul>

@@ -60,7 +60,7 @@ export default function BlogPostPage({ params }: Props) {
     inLanguage: "vi-VN",
     mainEntityOfPage: url,
     dateModified: updatedAtIso,
-    author: { "@type": "Organization", name: "Trà Dưỡng Nhan" },
+    author: { "@type": "Person", name: "Nguyễn Hữu Hùng" },
     publisher: { "@type": "Organization", name: "Trà Dưỡng Nhan" }
   };
 
@@ -85,7 +85,7 @@ export default function BlogPostPage({ params }: Props) {
       <p>{post.intro}</p>
 
       <div className="meta-row">
-        <p><strong>Tác giả:</strong> Ban biên tập Trà Dưỡng Nhan</p>
+        <p><strong>Tác giả:</strong> Nguyễn Hữu Hùng</p>
         <p><strong>Cập nhật:</strong> {updatedAt}</p>
       </div>
 
