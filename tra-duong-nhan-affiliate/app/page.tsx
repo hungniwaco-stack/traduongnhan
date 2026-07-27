@@ -72,19 +72,16 @@ export default function HomePage() {
       </section>
 
       <section className="section">
-        <h2>Đánh giá từ người dùng</h2>
+        <h2>Vì sao nên tham khảo trước khi mua</h2>
         <div className="grid grid-3">
           <article className="card quote-card">
-            <p>“Mình chọn theo checklist và thấy dễ duy trì hơn hẳn, không còn mua theo cảm tính.”</p>
-            <strong>Lan, 29 tuổi</strong>
+            <p>Checklist rõ ràng theo từng nhu cầu, giúp bạn chọn đúng loại trà thay vì mua theo cảm tính.</p>
           </article>
           <article className="card quote-card">
-            <p>“Phần review có nêu rõ ai phù hợp ai không, nên đỡ tốn tiền thử sai.”</p>
-            <strong>Minh, 33 tuổi</strong>
+            <p>Mỗi bài review nêu rõ ai phù hợp và ai nên cân nhắc thêm, không chỉ toàn lời khen.</p>
           </article>
           <article className="card quote-card">
-            <p>“Mình thích vì bài viết ngắn gọn, có lộ trình uống theo ngày rất dễ làm theo.”</p>
-            <strong>Thảo, 26 tuổi</strong>
+            <p>Lộ trình uống theo ngày cụ thể, dễ áp dụng ngay thay vì lý thuyết chung chung.</p>
           </article>
         </div>
       </section>
