@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/routine-dep-da",
     "/thanh-loc-co-the",
     "/kien-thuc-duong-nhan",
+    "/san-pham",
     "/ve-chung-toi",
     "/chinh-sach-affiliate",
     "/lien-he",

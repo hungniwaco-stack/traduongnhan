@@ -69,6 +69,7 @@ export default function HomePage() {
       <section className="section">
         <h2>Top sản phẩm trà được gợi ý</h2>
         <div className="grid grid-2">{products.map((product) => <ProductCard key={product.id} product={product} />)}</div>
+        <p><Link href="/san-pham">Xem toàn bộ danh mục sản phẩm →</Link></p>
       </section>
 
       <section className="section">

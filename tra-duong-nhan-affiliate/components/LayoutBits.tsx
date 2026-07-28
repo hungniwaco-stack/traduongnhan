@@ -16,6 +16,7 @@ export function Header() {
           <Link href="/routine-dep-da">Routine đẹp da</Link>
           <Link href="/thanh-loc-co-the">Thanh lọc cơ thể</Link>
           <Link href="/kien-thuc-duong-nhan">Kiến thức dưỡng nhan</Link>
+          <Link href="/san-pham">Danh mục sản phẩm</Link>
         </nav>
       </div>
     </header>
